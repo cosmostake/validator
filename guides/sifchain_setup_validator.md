@@ -315,4 +315,7 @@ sifnoded tx staking create-validator \
   --node tcp://rpc.sifchain.finance:80 \
   --keyring-backend file
   ```
-  
+  Unjail
+  ```console
+  sifnoded tx slashing unjail --from coinside --chain-id sifchain-1 --gas 300000
+  ```
