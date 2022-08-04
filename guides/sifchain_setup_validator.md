@@ -319,3 +319,8 @@ sifnoded tx staking create-validator \
   ```console
   sifnoded tx slashing unjail --from coinside --chain-id sifchain-1 --gas 300000
   ```
+  
+  Governance vote
+  ```console
+  sifnoded tx gov vote 98 yes --from coinside --chain-id sifchain-1 --fees 100000000000000000rowan --gas auto -y
+  ```
