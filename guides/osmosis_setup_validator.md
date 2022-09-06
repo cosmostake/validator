@@ -36,7 +36,7 @@ cd osmosis
 
 Take new release:
 ```console
-git checkout v11.0.1
+git checkout v11.0.0
 ```
 
 Compile and install:
@@ -115,7 +115,7 @@ cosmovisor version
 
 Output 
 ```
-11.0.1
+11.0.0
 ```
 
 This should print the version number of osmosisd.
