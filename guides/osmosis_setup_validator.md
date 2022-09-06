@@ -281,3 +281,25 @@ osmosisd keys add <wallet> --keyring-backend file
 Recover Keplr acoount. Use your `mnemonic` phrase. 
 Send token ``OSMO`` to it. 
 
+## Setup Validator
+
+Make transaction. to change the ``moniker``, ``from`` and ``chain-id`` and other values as required:
+```console
+# change <wallet> to yours
+osmosisd tx staking create-validator \
+  --commission-max-change-rate 0.01 \
+  --commission-max-rate 0.20 \
+  --commission-rate 0.05 \
+  --amount 1100000uosmo \
+  --pubkey $(osmosisd tendermint show-validator) \
+  --chain-id osmosis-1 \
+  --min-self-delegation "1" \
+  --gas-prices 0.1uosmo \
+  --gas-adjustment 1.5 \
+  --gas auto \
+  --moniker "COIN SIDE" \
+  --identity <your_keybase> \
+  --website="https://github.com/COIN-SIDE/validator" \
+  --details="Our crypto community aspires to a decentralized future" \
+  --from <wallet>
+  ```
