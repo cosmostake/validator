@@ -303,3 +303,12 @@ osmosisd tx staking create-validator \
   --details="Our crypto community aspires to a decentralized future" \
   --from <wallet>
   ```
+Unjail
+  ```console
+  osmosisd tx slashing unjail --from <wallet> --chain-id osmosis-1 --gas auto
+  ```
+  
+  Governance vote
+  ```console
+  osmosisd tx gov vote 98 yes --from <wallet> --chain-id osmosis-1 --gas-prices 0.1uosmo --gas auto -y
+  ```
