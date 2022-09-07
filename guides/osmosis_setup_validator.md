@@ -305,10 +305,10 @@ osmosisd tx staking create-validator \
   ```
 Unjail
   ```console
-  osmosisd tx slashing unjail --from <wallet> --chain-id osmosis-1 --gas auto
+  osmosisd tx slashing unjail --from <wallet> --chain-id osmosis-1 --gas-prices 0.1uosmo --gas-adjustment 1.5 --gas auto
   ```
   
   Governance vote
   ```console
-  osmosisd tx gov vote 98 yes --from <wallet> --chain-id osmosis-1 --gas-prices 0.1uosmo --gas auto -y
+  osmosisd tx gov vote 98 yes --from <wallet> --chain-id osmosis-1 --gas-prices 0.1uosmo --gas-adjustment 1.5 --gas auto --node "tcp://127.0.0.1:20657" -y
   ```
