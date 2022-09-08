@@ -12,7 +12,7 @@ Our products:
 
 `We also make technical and humanitarian contributions for crypto projects`
 
-To see our mainnet validator, testnet validator, contributions and contacts
+To check our [mainnet validator](https://github.com/maxlevush-COINSIDE/validator#validator-mainnet), [testnet validator](https://github.com/maxlevush-COINSIDE/validator#validator-testnet), [contributions](https://github.com/maxlevush-COINSIDE/validator#contributions), [contacts](https://github.com/maxlevush-COINSIDE/validator#contacts) and [Team](https://github.com/maxlevush-COINSIDE/validator#team)
 
 # Validator mainnet
 
@@ -36,3 +36,17 @@ To see our mainnet validator, testnet validator, contributions and contacts
 
 ## [Joystream](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.joystream.org%3A9944#/staking)
 
+# Contacts
+
+- [Telegram channel COIN SIDE](https://t.me/coinside_public)
+- [Youtube](https://www.youtube.com/channel/UC5VKIMlsGmlBgQESGPfYmEQ)
+- [Twitter](https://twitter.com/Coin_Validator)
+- [Medium](https://medium.com/@Coin_Side_Validator)
+- Telegram @laurakhar, @maxlevush
+
+# Team
+
+- Creative Director [Laura Kharkevych](https://github.com/laura2727)
+- Developer, Technical Director [Max Levush](https://github.com/maxlevush-COINSIDE)
+- Community Developer [Yan Lytvynenko](https://github.com/ZAZIK3)
+- Graphic Designer [Violetta Markush](https://github.com/vilolaa)
