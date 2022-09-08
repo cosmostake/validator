@@ -3,7 +3,7 @@ Our crypto community aspires to a decentralized future
 
 ## [Osmosis validator](https://www.mintscan.io/osmosis/validators/osmovaloper183psjr4y05kwtpfew073q6hm84xdhp9tcn8ne7)
 
-## [Osmosis contributions](https://github.com/maxlevush-COINSIDE/validator/tree/main/contributions)
+## [Osmosis contributions](https://github.com/COIN-SIDE/validator/tree/main/contributions)
 
 ## [Sifchain](https://www.mintscan.io/sifchain/validators/sifvaloper1k89razs48taq2xsjhpq8h6htm4jfyxvalwj7jj)
 
