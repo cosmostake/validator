@@ -1,5 +1,18 @@
 # COIN SIDE validator
-Our crypto community aspires to a decentralized future
+`Our crypto community aspires to a decentralized future`
+
+COIN SIDE — crypto community consisting of 10,000+ people.
+
+We are an educational platform. The main goal is to teach beginners how to use cryptocurrency, blockchain and other decentralized products. And join the decentralized future. We take the beginner by the hand and bring to the result.
+
+Our products:
+- educational platform (lessons, webinars, homework, practical tasks)
+- non-public VIP club for professionals for 1000+ people
+- validator
+
+`We also make technical and humanitarian contributions for crypto projects`
+
+To see our mainnet validator, testnet validator, contributions and contacts
 
 ## [Osmosis validator](https://www.mintscan.io/osmosis/validators/osmovaloper183psjr4y05kwtpfew073q6hm84xdhp9tcn8ne7)
 
