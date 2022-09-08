@@ -26,6 +26,17 @@ To check our [mainnet validator](https://github.com/maxlevush-COINSIDE/validator
 
 # Contributions
 
+We do:
+- setup mainnet validators
+- participate in testnets 
+- translations in 5 languages
+- make education content (videos, guides, blogs etc) 
+- write posts/articles/guides about projects in social media
+- technical contributions
+- community contribution (invite many people, referrals, moderate chats)
+- blockchain governence participation
+- UI/UX design (blog pictures, 3D, digital design, memes)
+
 ## [Osmosis contributions](https://github.com/COIN-SIDE/validator/tree/main/contributions)
 
 ## [Joystream contributions](https://github.com/maxlevush-COINSIDE/community-repo/blob/master/contributions/fm-reports/maxlevush-2130.md)
@@ -43,6 +54,7 @@ To check our [mainnet validator](https://github.com/maxlevush-COINSIDE/validator
 - [Twitter](https://twitter.com/Coin_Validator)
 - [Medium](https://medium.com/@Coin_Side_Validator)
 - Telegram @laurakhar, @maxlevush
+- Email maksim.l@coin-side.com
 
 # Team
 
