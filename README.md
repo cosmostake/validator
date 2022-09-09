@@ -51,7 +51,7 @@ We do:
 
 - [Telegram channel COIN SIDE](https://t.me/coinside_public)
 - [Youtube](https://www.youtube.com/channel/UC5VKIMlsGmlBgQESGPfYmEQ)
-- [Twitter](https://twitter.com/Coin_Validator)
+- [Twitter](https://medium.com/@COIN.SIDE.VALIDATORS)
 - [Medium](https://medium.com/@Coin_Side_Validator)
 - Telegram @laurakhar, @maxlevush
 - Email maksim.l@coin-side.com
