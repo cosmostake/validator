@@ -120,7 +120,7 @@ Output
 
 This should print the version number of osmosisd.
 
-## Initialize and Configure Sifnode
+## Initialize and Configure Osmosis node
 
 Now let's initialize the node:
 ```console
