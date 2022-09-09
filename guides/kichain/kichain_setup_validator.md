@@ -1,4 +1,4 @@
-# Osmosis
+# Kichain
 ``Setup validator node manually``
 
 ## install dependencies, if needed
@@ -22,21 +22,21 @@ You can test that Go is installed by executing:
 ```console
 go version
 ```
-## Install Osmosis
+## Install Kichain
 
 Clone the Osmosis github repository:
 ```console
-git clone https://github.com/osmosis-labs/osmosis
+git clone https://github.com/KiFoundation/ki-tools.git
 ```
 
-Go to ``osmosis`` directory:
+Go to ``ki-tools`` directory:
 ```console
-cd osmosis
+cd ki-tools
 ```
 
 Take new release:
 ```console
-git checkout v11.0.0
+git checkout 3.0.0
 ```
 
 Compile and install:
@@ -45,10 +45,10 @@ make install
 ```
 Check that the installation was successful:
 ```console
-osmosisd version
+kid version
 ```
 
-This should print the version number of osmosisd.
+This should print the version number of kid.
 
 ## Setup Cosmovisor
 
@@ -89,22 +89,22 @@ cd $HOME
 
 First, create the required directories:
 ```console
-mkdir -p $HOME/.osmosisd/cosmovisor/genesis/bin
+mkdir -p $HOME/.kid/cosmovisor/genesis/bin
 ```
 ```console
-mkdir $HOME/.osmosisd/cosmovisor/upgrades
+mkdir $HOME/.kid/cosmovisor/upgrades
 ```
 
-Then copy the ``osmosisd`` binanry to the ``genesis/bin`` folder:
+Then copy the ``kid`` binanry to the ``genesis/bin`` folder:
 ```console
-cp $GOPATH/bin/osmosisd $HOME/.osmosisd/cosmovisor/genesis/bin
+cp $GOPATH/bin/kid $HOME/.kid/cosmovisor/genesis/bin
 ```
 Now we need to add some environment variables that Cosmovisor is dependent on:
 ```console
-export DAEMON_HOME=$HOME/.osmosisd
+export DAEMON_HOME=$HOME/.kid
 export DAEMON_RESTART_AFTER_UPGRADE=true
 export DAEMON_ALLOW_DOWNLOAD_BINARIES=false
-export DAEMON_NAME=osmosisd
+export DAEMON_NAME=kid
 export UNSAFE_SKIP_BACKUP=true
 ```
 
@@ -115,48 +115,53 @@ cosmovisor version
 
 Output 
 ```
-11.0.0
+Mainnet-3.0.0
 ```
 
-This should print the version number of osmosisd.
+This should print the version number of kid.
 
-## Initialize and Configure Sifnode
+## Initialize and Configure Ki node
 
 Now let's initialize the node:
 ```console
 NODE_MONIKER=<YOUR_NODE_MONIKER>
 ```
 ```console
-osmosisd config chain-id osmosis-1
+kid config chain-id kichain-2
 ```
 ```console
-osmosisd init $NODE_MONIKER --chain-id osmosis-1
+kid init $NODE_MONIKER --chain-id kichain-2
 ```
 
 ## Download the latest Genesis File
 
 Download the latest genesis file:
 ```console
-curl https://github.com/osmosis-labs/networks/raw/main/osmosis-1/genesis.json > $HOME/.osmosisd/config/genesis.json
+curl https://raw.githubusercontent.com/KiFoundation/ki-networks/v0.1/Mainnet/kichain-2/genesis.json > $HOME/.kid/config/genesis.json
 ```
 
 Check the genesis file:
 ```console
-sha256sum $HOME/.osmosisd/config/genesis.json
+sha256sum $HOME/.kid/config/genesis.json
 ```
 
 ## Setup Seeds and Persistance Peers
 
 First do:
 ```console
-seeds="21d7539792ee2e0d650b199bf742c56ae0cf499e@162.55.132.230:2000,295b417f995073d09ff4c6c141bd138a7f7b5922@65.21.141.212:2000,ec4d3571bf709ab78df61716e47b5ac03d077a1a@65.108.43.26:2000,4cb8e1e089bdf44741b32638591944dc15b7cce3@65.108.73.18:2000,f515a8599b40f0e84dfad935ba414674ab11a668@osmosis.blockpane.com:26656,6bcdbcfd5d2c6ba58460f10dbcfde58278212833@osmosis.artifact-staking.io:26656"
+seeds="24cbccfa8813accd0ebdb09e7cdb54cff2e8fcd9@51.89.166.197:26656"
 ```
 ```console
-peers="83c06bc290b6dffe05aa9cec720bedfc118afcbc@osmosis.nodejumper.io:35656"
+peers="766ed622c79fa9cfd668db9741a1f72a5751e0cd@kichain.nodejumper.io:28656"
 ```
 Script for you to update ``persistent_peers`` and ``seeds`` setting with these peers in ``config.toml``
 ```console
-sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.osmosisd/config/config.toml
+sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.kid/config/config.toml
+```
+
+Also minimum gas prices:
+```console
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.0001uxki"|g' $HOME/.kid/config/app.toml
 ```
 
 Check. Don't be lazy:
@@ -168,16 +173,13 @@ cat config.toml
 
 Settings:
 ```console
-sed -i 's|pruning = "default"|pruning = "custom"|g' $HOME/.osmosisd/config/app.toml
+sed -i 's|pruning = "default"|pruning = "custom"|g' $HOME/.kid/config/app.toml
 ```
 ```console
-sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.osmosisd/config/app.toml
+sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.kid/config/app.toml
 ```
 ```console
-sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.osmosisd/config/app.toml
-```
-```console
-sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/g' $HOME/.osmosisd/config/app.toml
+sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.kid/config/app.toml
 ```
 
 Pruning:
@@ -202,30 +204,30 @@ Download the snapshot:
 cd
 ```
 ```console
-wget -O osmosis_5901913.tar.lz4 https://snapshots1.polkachu.com/snapshots/osmosis/osmosis_5901913.tar.lz4
+wget -O kichain_11412789.tar.lz4 https://snapshots1.polkachu.com/snapshots/kichain/kichain_11412789.tar.lz4
 ```
 
 Decompress the snapshot to your database location:
 ```console
-lz4 -c -d osmosis_5901913.tar.lz4  | tar -x -C $HOME/.osmosisd
+lz4 -c -d kichain_11412789.tar.lz4  | tar -x -C $HOME/.kid
 ```
 
 Remove downloaded snapshot to free up space:
 ```console
-rm -v osmosis_5901913.tar.lz4
+rm -v kichain_11412789.tar.lz4
 ```
 
 ## Setup Service file
 
 Use editor ``nano``:
 ```console
-nano /etc/systemd/system/osmosisd.service
+nano /etc/systemd/system/kid.service
 ```
 
 Output:
 ```
 [Unit]
-Description=Osmosis Node
+Description=Kichain Node
 After=network-online.target
 
 [Service]
@@ -234,8 +236,8 @@ ExecStart=/root/go/bin/cosmovisor start
 Restart=always
 RestartSec=3
 LimitNOFILE=10000
-Environment="DAEMON_NAME=osmosisd"
-Environment="DAEMON_HOME=/root/.osmosisd"
+Environment="DAEMON_NAME=kid"
+Environment="DAEMON_HOME=/root/.kid"
 Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
 Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
 Environment="DAEMON_LOG_BUFFER_SIZE=512"
@@ -245,29 +247,29 @@ Environment="UNSAFE_SKIP_BACKUP=true"
 WantedBy=multi-user.target
 ```
 
-Let's try to start ``osmosisd``. First reload the systemctl daemon:
+Let's try to start ``kid``. First reload the systemctl daemon:
 ```console
 sudo -S systemctl daemon-reload
 ```
 
-Then enable the ``osmosisd`` service:
+Then enable the ``kid`` service:
 ```console
-sudo -S systemctl enable osmosisd
+sudo -S systemctl enable kid
 ```
 
-We can now start ``osmosisd``:
+We can now start ``kid``:
 ```console
-sudo systemctl start osmosisd
+sudo systemctl start kid
 ```
 
 We can check that the service is running:
 ```console
-sudo systemctl status osmosisd
+sudo systemctl status kid
 ```
 
 Check logs:
 ```console
-journalctl -f -n 200 -u osmosisd
+journalctl -f -n 200 -u kid
 ```
 
 ## Wallet preparation:
@@ -275,40 +277,41 @@ journalctl -f -n 200 -u osmosisd
 Let's generate a new key:
 ```console
 # change <wallet> to yours
-osmosisd keys add <wallet> --keyring-backend file
+kid keys add <wallet> --keyring-backend file
 ```
 
 Recover Keplr acoount. Use your `mnemonic` phrase. 
-Send token ``OSMO`` to it. 
+Send token ``XKI`` to it. 
 
 ## Setup Validator
 
 Make transaction. to change the ``moniker``, ``from`` and ``chain-id`` and other values as required:
 ```console
 # change <wallet> to yours
-osmosisd tx staking create-validator \
+kid tx staking create-validator \
   --commission-max-change-rate 0.01 \
   --commission-max-rate 0.20 \
   --commission-rate 0.05 \
-  --amount 1100000uosmo \
-  --pubkey $(osmosisd tendermint show-validator) \
-  --chain-id osmosis-1 \
+  --amount 10000000uxki \
+  --pubkey $(kid tendermint show-validator) \
+  --chain-id kichain-2 \
   --min-self-delegation "1" \
-  --gas-prices 0.1uosmo \
+  --gas-prices 0.1uxki \
   --gas-adjustment 1.5 \
   --gas auto \
   --moniker "COIN SIDE" \
   --identity <your_keybase> \
-  --website="https://github.com/COIN-SIDE/validator" \
-  --details="Our crypto community aspires to a decentralized future" \
-  --from <wallet>
+  --website "https://github.com/COIN-SIDE/validator" \
+  --details "Our crypto community aspires to a decentralized future" \
+  --from <wallet> \
+  --node "tcp://127.0.0.1:20657"
   ```
 Unjail
   ```console
-  osmosisd tx slashing unjail --from <wallet> --chain-id osmosis-1 --gas-prices 0.1uosmo --gas-adjustment 1.5 --gas auto
+  kid tx slashing unjail --from <wallet> --chain-id kichain-2 --gas-prices 0.1uxki --gas-adjustment 1.5 --gas auto --node "tcp://127.0.0.1:20657"
   ```
   
   Governance vote
   ```console
-  osmosisd tx gov vote 98 yes --from <wallet> --chain-id osmosis-1 --gas-prices 0.1uosmo --gas-adjustment 1.5 --gas auto --node "tcp://127.0.0.1:20657" -y
+  kid tx gov vote 98 yes --from <wallet> --chain-id kichain-2 --gas-prices 0.1uxki --gas-adjustment 1.5 --gas auto --node "tcp://127.0.0.1:20657" -y
   ```
