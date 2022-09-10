@@ -63,7 +63,7 @@ We do:
 - Creative Director [Laura Kharkevych](https://github.com/laura2727)
 - Developer, Technical Director [Max Levush](https://github.com/maxlevush-COINSIDE)
 - Community Developer [Yan Lytvynenko](https://github.com/ZAZIK3)
-- Graphic Designer [Violetta Markush](https://github.com/vilolaa)
+- Web-Designer [Violetta Markush](https://github.com/vilolaa)
 
 and 20+ employees working with the education platform and the community
 
