@@ -24,7 +24,7 @@ go version
 ```
 ## Install Stride
 
-Clone the Osmosis github repository:
+Clone the Stride github repository:
 ```console
 git clone https://github.com/Stride-Labs/stride
 ```
