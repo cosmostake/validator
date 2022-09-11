@@ -67,7 +67,7 @@ strided init $NODE_MONIKER --chain-id stride-1
 
 Download the latest genesis file:
 ```console
-cd .stride/config && wget https://github.com/Stride-Labs/testnet/main/mainnet/genesis.json
+cd .stride/config && wget https://raw.githubusercontent.com/Stride-Labs/testnet/main/mainnet/genesis.json
 ```
 
 ## Setup Seeds and Persistance Peers
