@@ -26,6 +26,8 @@ To check our [mainnet validator](https://github.com/maxlevush-COINSIDE/validator
 
 ## [Rizon](https://www.mintscan.io/rizon/validators/rizonvaloper1tg6qsuvpkcr3vxkq4z56xnhyqypkjux2krwqgd)
 
+## [Stride](https://www.mintscan.io/stride/validators/stridevaloper1ykcp0qvdyvv78vkjsz6zx4hh90g9rxmhegjd3w)
+
 # Contributions
 
 We do:
