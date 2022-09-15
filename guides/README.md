@@ -6,7 +6,7 @@
 
 ## [Sifchain](https://github.com/COIN-SIDE/validator/blob/main/guides/sifchain/sifchain_setup_validator.md)
 
-## Rizon
+## [Stride](https://github.com/COIN-SIDE/validator/blob/main/guides/stride/stride_setup_validator.md)
 
 ## NYM mixnode
 
