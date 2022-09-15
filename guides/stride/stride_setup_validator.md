@@ -115,6 +115,7 @@ pruning-interval = "10"
 ## Setup Snapshot Polkachu.com
 
 Current snapshot here https://polkachu.com/tendermint_snapshots/stride
+
 Install lz4:
 ```console
 sudo apt install snapd -y
