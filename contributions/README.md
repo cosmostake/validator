@@ -12,8 +12,45 @@ This repository is based on the overall work of our team on the development of t
 - We're validators Osmosis [Osmosis](https://www.mintscan.io/osmosis/validators/osmovaloper183psjr4y05kwtpfew073q6hm84xdhp9tcn8ne7)
 <img width="1512" alt="image" src="https://user-images.githubusercontent.com/86729290/188917022-0c5eba0d-d965-49be-a456-757708ded14c.png">
 
-## Community Growth (Youtube, Medium, Gitbook etc.) 
+## Community Growth (Twitter, Youtube, Medium, Gitbook etc.) 
 We create a lot of Osmosis related content (Multiple languages, English, Russian, Ukrainian) to improve accessibility, community knowledge of features and Osmosis. We have some basic images, logos, gradients from the Osmosis brand pack, and we often mention the Osmosis logo or other things related to it.
+
+## Twitter
+We create a lot of Osmosis-related content to improve the community's knowledge of features and inform about Osmosis-related news.
+We use the Osmosis brandbook to match the style of the company. We often mention the Osmosis logo or other related things.
+
+- OSMOSIS WEEKLY RECAP
+- [Link to Twitter post](https://twitter.com/Coin_Validator/status/1570338464675303424?s=20&t=hTdnEK5KBfuo_bInGJywrA)
+
+This infographic shows: basic statistics and news about Osmosis.
+![OSMOSIS WEEKLY RECAP](https://user-images.githubusercontent.com/86729290/190652369-bc293c1f-402d-4e5f-b863-e4dc766bf3c2.png)
+____
+
+- COSMOS ECOSYSTEM WEEKLY NEWS 
+- [Link to Twitter post](https://twitter.com/Coin_Validator/status/1569634751782461442?s=20&t=9W3vbB6D1SzfWNG4gc_o6A)
+
+This infographic shows: what happened during last week in Cosmos Ecosystem. Osmosis - have part in every episode!.
+![COSMOS ECOSYSTEM WEEKLY NEWS 111](https://user-images.githubusercontent.com/86729290/190658117-35c346e8-7d43-4876-b715-7f743430aeda.png)
+____
+
+- TOP 10 LIQUIDITY POOLS ON OSMOSIS IN THE LAST 7D
+- [Link to Twitter post](https://twitter.com/Coin_Validator/status/1569014572102606849?s=20&t=9W3vbB6D1SzfWNG4gc_o6A)
+
+We also create different statistical infographics like this one: 
+![FcZCKKfXkAEr33t](https://user-images.githubusercontent.com/86729290/190659130-a5cafe35-4303-4b87-adad-5c74d62a090f.jpeg)
+____
+
+- Here's the list of Twitter mentions from [COIN SIDE VALIDATOR](https://twitter.com/Coin_Validator)
+
+TWITTER NEWS AND UDPDATES FOR OSMOSIS
+
+[10.09.2022](https://twitter.com/Coin_Validator/status/1568520718299660288?s=20&t=T-9U9G0uflwkSEFRNmJZ6w), 
+[11.09.2022](https://twitter.com/Coin_Validator/status/1569014572102606849?s=20&t=T-9U9G0uflwkSEFRNmJZ6w),
+[12.09.2022](https://twitter.com/Coin_Validator/status/1569274220068147200?s=20&t=T-9U9G0uflwkSEFRNmJZ6w),
+[13.09.2022](https://twitter.com/Coin_Validator/status/1569634751782461442?s=20&t=T-9U9G0uflwkSEFRNmJZ6w),
+[14.09.2022](https://twitter.com/Coin_Validator/status/1569975867564240896?s=20&t=T-9U9G0uflwkSEFRNmJZ6w),
+[15.09.2022](https://twitter.com/Coin_Validator/status/1570338464675303424?s=20&t=T-9U9G0uflwkSEFRNmJZ6w),
+[17.09.2022](https://twitter.com/Coin_Validator/status/1571066403540865025?s=20&t=T-9U9G0uflwkSEFRNmJZ6w),
 
 ## YouTube
 This is our biggest part of our contribution to Osmosis: 
