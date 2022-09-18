@@ -40,6 +40,12 @@ We also create different statistical infographics like this one:
 ![FcZCKKfXkAEr33t](https://user-images.githubusercontent.com/86729290/190659130-a5cafe35-4303-4b87-adad-5c74d62a090f.jpeg)
 ____
 
+- We create a suggestion and reminder for voting:
+
+![PROPOSAL #329_](https://user-images.githubusercontent.com/86729290/190895439-da552084-a8ed-485e-af57-210c76072064.png)
+
+____
+
 - Here's the list of Twitter mentions from [COIN SIDE VALIDATOR](https://twitter.com/Coin_Validator)
 
 TWITTER NEWS AND UDPDATES FOR OSMOSIS
@@ -51,6 +57,14 @@ TWITTER NEWS AND UDPDATES FOR OSMOSIS
 [14.09.2022](https://twitter.com/Coin_Validator/status/1569975867564240896?s=20&t=T-9U9G0uflwkSEFRNmJZ6w),
 [15.09.2022](https://twitter.com/Coin_Validator/status/1570338464675303424?s=20&t=T-9U9G0uflwkSEFRNmJZ6w),
 [17.09.2022](https://twitter.com/Coin_Validator/status/1571066403540865025?s=20&t=T-9U9G0uflwkSEFRNmJZ6w),
+[17.09.2022](https://twitter.com/Coin_Validator/status/1571179932901953538?s=20&t=U-1tKV8g_WheSo7l90_3_w),
+[18.09.2022](https://twitter.com/Coin_Validator/status/1571423306812739584?s=20&t=U-1tKV8g_WheSo7l90_3_w),
+
+Some stats:
+
+<img width="596" alt="1" src="https://user-images.githubusercontent.com/86729290/190895681-03bd9846-4145-4c21-a1c5-a19aee90da2f.png">
+
+____
 
 ## YouTube
 This is our biggest part of our contribution to Osmosis: 
@@ -109,6 +123,19 @@ Also in Ukrainian:
 - [Депозит активів IBC (Ukrainian translation)](https://link.medium.com/X9rdk4PVSsb)
 - [Взаємодія з биржею Osmosis. Свап токенів. Забезпечення ліквідності. Заробіток винагород за ліквідність. (Ukrainian translation)](https://link.medium.com/e5UsxaYVSsb)
 - [Розуміння процесу стимулювання ліквідності на Osmosis (Ukrainian translation)](https://link.medium.com/tZMPE97VSsb)
+____
+
+We translate Osmosis blog posts:
+
+- Osmosis for applications: cross-chain swaps as a service
+
+![0_Nc107RRiFH1cy8Bj](https://user-images.githubusercontent.com/86729290/190895315-b182d791-8369-4688-a0ff-5f36df3f1a9a.png)
+
+Original:
+https://link.medium.com/26DOQE3Totb
+
+Ukrainian translation:
+https://link.medium.com/5lC82bLTotb
 
 ## Gitbook
 Also, our team made a complete translation of the Osmosis documentation into Ukrainian and Russian.
