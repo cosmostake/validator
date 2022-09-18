@@ -1,11 +1,4 @@
-<p align="center"><img src="img/storage-provider_new.svg"></p>
-
-<div align="center">
-  <h4>This is a guide to setting up your <a href="https://github.com/Joystream/joystream/tree/master/storage-node">storage node</a>, and getting started as a Storage Provider on the latest
-    <a href="https://testnet.joystream.org/">testnet</a>.</h4><br>
-</div>
-
-
+# Storage Provider guid
 
 Table of Contents
 ==
