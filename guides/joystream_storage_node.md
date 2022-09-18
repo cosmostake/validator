@@ -1,4 +1,4 @@
-# Storage Provider guid
+# Storage Provider guide
 
 Table of Contents
 ==
