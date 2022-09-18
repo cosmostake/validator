@@ -308,19 +308,23 @@ sifnoded tx staking create-validator \
   --gas 300000 \
   --fees 100000000000000000rowan \
   --moniker "COIN SIDE" \
-  --identity=9B2EB22C7DAC8684 \
-  --website="https://coin-side.com/nastavnichestvo" \
-  --details="Crypto community who care about decentralized future" \
+  --identity <your_kebase> \
+  --website "https://github.com/COIN-SIDE/validator" \
+  --details "Our crypto community aspires to a decentralized future" \
   --from <wallet> \
   --node tcp://rpc.sifchain.finance:80 \
   --keyring-backend file
   ```
   Unjail
   ```console
-  sifnoded tx slashing unjail --from coinside --chain-id sifchain-1 --gas 300000
+  sifnoded tx slashing unjail --from <wallet> --chain-id sifchain-1 --gas 300000
   ```
   
   Governance vote
   ```console
-  sifnoded tx gov vote 98 yes --from coinside --chain-id sifchain-1 --fees 100000000000000000rowan --gas auto -y
+  sifnoded tx gov vote 98 yes --from <wallet> --chain-id sifchain-1 --fees 100000000000000000rowan --gas auto -y
+  ```
+  Withdraw Commission And Rewards From Your Validator
+  ```console
+  sifnoded tx distribution withdraw-rewards $(sifnoded keys show <wallet> --bech val -a) --commission --from <wallet> --chain-id sifchain-1 --fees 100000000000000000rowan --gas auto -y
   ```
