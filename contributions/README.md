@@ -7,3 +7,4 @@ Here is the list of our contributions to:
 - [Osmosis](https://github.com/COIN-SIDE/validator/blob/main/contributions/osmosis.md)
 - [Juno Network](https://github.com/COIN-SIDE/validator/blob/main/contributions/juno.md)
 - [SifChain](https://github.com/COIN-SIDE/validator/blob/main/contributions/sifchain.md)
+- [Evmos](https://github.com/COIN-SIDE/validator/blob/main/contributions/evmos.md)
