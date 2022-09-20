@@ -1,3 +1,5 @@
+![1500x500 Main Git](https://user-images.githubusercontent.com/86729290/191213537-5f68f2b0-09d0-49d3-9574-352a99b4bf20.png)
+
 # COIN SIDE validator
 `Our crypto community aspires to a decentralized future`
 
