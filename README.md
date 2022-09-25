@@ -26,6 +26,8 @@ To check our [mainnet validator](https://github.com/maxlevush-COINSIDE/validator
 
 ## [Kichain](https://www.mintscan.io/ki-chain/validators/kivaloper1tws9ll7fmkj3tv84tamczx2llv57hrlr7vu06f)
 
+## [Persistence](https://www.mintscan.io/persistence/validators/persistencevaloper1qz6xsskhyyd6mrqns2e3empull7el0gqp5dkru)
+
 ## [NYM mixnode](https://mixnet.explorers.guru/mixnode/F855myXzPAv1oWyZcMRNggZMPhky3BXxBR6dJTYYBScB)
 
 ## [Rizon](https://www.mintscan.io/rizon/validators/rizonvaloper1tg6qsuvpkcr3vxkq4z56xnhyqypkjux2krwqgd)
