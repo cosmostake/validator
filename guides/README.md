@@ -8,6 +8,8 @@
 
 ## [Stride](https://github.com/COIN-SIDE/validator/blob/main/guides/stride/stride_setup_validator.md)
 
+## [Persistence](https://github.com/COIN-SIDE/validator/blob/main/guides/persistence/persistence_setup_validator.md)
+
 ## [Sifchain follow node IPFS](https://github.com/COIN-SIDE/validator/blob/main/guides/sifchain/follow_node_ipfs.md)
 
 # Upgrade guides
