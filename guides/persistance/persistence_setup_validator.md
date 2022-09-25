@@ -1,4 +1,4 @@
-# Osmosis
+# Persistence
 ``Setup validator node manually``
 
 ## install dependencies, if needed
@@ -22,21 +22,21 @@ You can test that Go is installed by executing:
 ```console
 go version
 ```
-## Install Osmosis
+## Install Persistence
 
-Clone the Osmosis github repository:
+Clone the Persistence github repository:
 ```console
-git clone https://github.com/osmosis-labs/osmosis
+git clone https://github.com/persistenceOne/persistenceCore
 ```
 
-Go to ``osmosis`` directory:
+Go to ``persistence`` directory:
 ```console
-cd osmosis
+cd persistenceCore
 ```
 
 Take new release:
 ```console
-git checkout v11.0.0
+git checkout v3.1.1
 ```
 
 Compile and install:
@@ -45,10 +45,10 @@ make install
 ```
 Check that the installation was successful:
 ```console
-osmosisd version
+persistenceCore version
 ```
 
-This should print the version number of osmosisd.
+This should print the version number of persistenceCore.
 
 ## Setup Cosmovisor
 
@@ -89,22 +89,22 @@ cd $HOME
 
 First, create the required directories:
 ```console
-mkdir -p $HOME/.osmosisd/cosmovisor/genesis/bin
+mkdir -p $HOME/.persistenceCore/cosmovisor/genesis/bin
 ```
 ```console
-mkdir $HOME/.osmosisd/cosmovisor/upgrades
+mkdir $HOME/.persistenceCore/cosmovisor/upgrades
 ```
 
-Then copy the ``osmosisd`` binanry to the ``genesis/bin`` folder:
+Then copy the ``persistenceCore`` binanry to the ``genesis/bin`` folder:
 ```console
-cp $GOPATH/bin/osmosisd $HOME/.osmosisd/cosmovisor/genesis/bin
+cp $GOPATH/bin/persistenceCore $HOME/.persistenceCore/cosmovisor/genesis/bin
 ```
 Now we need to add some environment variables that Cosmovisor is dependent on:
 ```console
-export DAEMON_HOME=$HOME/.osmosisd
+export DAEMON_HOME=$HOME/.persistenceCore
 export DAEMON_RESTART_AFTER_UPGRADE=true
 export DAEMON_ALLOW_DOWNLOAD_BINARIES=false
-export DAEMON_NAME=osmosisd
+export DAEMON_NAME=persistenceCore
 export UNSAFE_SKIP_BACKUP=true
 ```
 
@@ -113,50 +113,49 @@ Check everything done:
 cosmovisor version
 ```
 
-Output 
-```
-11.0.0
-```
+This should print the version number of persistenceCore.
 
-This should print the version number of osmosisd.
-
-## Initialize and Configure Osmosis node
+## Initialize and Configure Persistence node
 
 Now let's initialize the node:
 ```console
 NODE_MONIKER=<YOUR_NODE_MONIKER>
 ```
 ```console
-osmosisd config chain-id osmosis-1
+persistenceCore config chain-id core-1
 ```
 ```console
-osmosisd init $NODE_MONIKER --chain-id osmosis-1
+persistenceCore init $NODE_MONIKER --chain-id core-1
 ```
 
 ## Download the latest Genesis File
 
 Download the latest genesis file:
 ```console
-curl https://github.com/osmosis-labs/networks/raw/main/osmosis-1/genesis.json > $HOME/.osmosisd/config/genesis.json
+curl https://raw.githubusercontent.com/persistenceOne/networks/master/core-1/final_genesis.json > $HOME/.persistenceCore/config/genesis.json
 ```
 
 Check the genesis file:
 ```console
-sha256sum $HOME/.osmosisd/config/genesis.json
+sha256sum $HOME/.persistenceCore/config/genesis.json
 ```
 
 ## Setup Seeds and Persistance Peers
 
 First do:
 ```console
-seeds="21d7539792ee2e0d650b199bf742c56ae0cf499e@162.55.132.230:2000,295b417f995073d09ff4c6c141bd138a7f7b5922@65.21.141.212:2000,ec4d3571bf709ab78df61716e47b5ac03d077a1a@65.108.43.26:2000,4cb8e1e089bdf44741b32638591944dc15b7cce3@65.108.73.18:2000,f515a8599b40f0e84dfad935ba414674ab11a668@osmosis.blockpane.com:26656,6bcdbcfd5d2c6ba58460f10dbcfde58278212833@osmosis.artifact-staking.io:26656"
+seeds="646d0ad08c408f93276f90cd29d4e410e2d60f63@xprt.paranorm.pro:25656"
 ```
 ```console
-peers="83c06bc290b6dffe05aa9cec720bedfc118afcbc@osmosis.nodejumper.io:35656"
+peers="646d0ad08c408f93276f90cd29d4e410e2d60f63@xprt.paranorm.pro:25656"
 ```
 Script for you to update ``persistent_peers`` and ``seeds`` setting with these peers in ``config.toml``
 ```console
-sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.osmosisd/config/config.toml
+sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.persistenceCore/config/config.toml
+```
+Minimum-gas-prices
+```console
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.005uxprt"|g' $HOME/.persistenceCore/config/app.toml
 ```
 
 Check. Don't be lazy:
@@ -168,16 +167,16 @@ cat config.toml
 
 Settings:
 ```console
-sed -i 's|pruning = "default"|pruning = "custom"|g' $HOME/.osmosisd/config/app.toml
+sed -i 's|pruning = "default"|pruning = "custom"|g' $HOME/.persistenceCore/config/app.toml
 ```
 ```console
-sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.osmosisd/config/app.toml
+sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.persistenceCore/config/app.toml
 ```
 ```console
-sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.osmosisd/config/app.toml
+sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.persistenceCore/config/app.toml
 ```
 ```console
-sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/g' $HOME/.osmosisd/config/app.toml
+sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/g' $HOME/.persistenceCore/config/app.toml
 ```
 
 Pruning:
@@ -187,55 +186,47 @@ pruning-keep-every = "0"
 pruning-interval = "10"
 ```
 
-## Setup Snapshot Polkachu.com
-
-Install lz4:
-```console
-sudo apt install snapd -y
-```
-```console
-sudo snap install lz4
-```
+## Setup Snapshot persistence.paranorm.pro
 
 Download the snapshot:
 ```console
-cd
+cd .persistenceCore
 ```
 ```console
-wget -O osmosis_5901913.tar.lz4 https://snapshots1.polkachu.com/snapshots/osmosis/osmosis_5901913.tar.lz4
+wget -O persistence_snapshot.tar.gz https://snapshot.paranorm.pro/persistence_snapshot.tar.gz
 ```
 
 Decompress the snapshot to your database location:
 ```console
-lz4 -c -d osmosis_5901913.tar.lz4  | tar -x -C $HOME/.osmosisd
+tar zxf persistence_snapshot.tar.gz
 ```
 
 Remove downloaded snapshot to free up space:
 ```console
-rm -v osmosis_5901913.tar.lz4
+rm -v persistence_snapshot.tar.gz
 ```
 
 ## Setup Service file
 
 Use editor ``nano``:
 ```console
-nano /etc/systemd/system/osmosisd.service
+nano /etc/systemd/system/persistenceCore.service
 ```
 
 Output:
 ```
 [Unit]
-Description=Osmosis Node
+Description=Persistence Node
 After=network-online.target
 
 [Service]
-User=$USER
-ExecStart=/root/go/bin/cosmovisor start
+User=root
+ExecStart=/root/gopath/bin/cosmovisor start
 Restart=always
 RestartSec=3
 LimitNOFILE=10000
-Environment="DAEMON_NAME=osmosisd"
-Environment="DAEMON_HOME=/root/.osmosisd"
+Environment="DAEMON_NAME=persistenceCore"
+Environment="DAEMON_HOME=/root/.persistenceCore"
 Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
 Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
 Environment="DAEMON_LOG_BUFFER_SIZE=512"
@@ -245,29 +236,29 @@ Environment="UNSAFE_SKIP_BACKUP=true"
 WantedBy=multi-user.target
 ```
 
-Let's try to start ``osmosisd``. First reload the systemctl daemon:
+Let's try to start ``persistenceCore``. First reload the systemctl daemon:
 ```console
 sudo -S systemctl daemon-reload
 ```
 
-Then enable the ``osmosisd`` service:
+Then enable the ``persistenceCore`` service:
 ```console
-sudo -S systemctl enable osmosisd
+sudo -S systemctl enable persistenceCore
 ```
 
-We can now start ``osmosisd``:
+We can now start ``persistenceCore``:
 ```console
-sudo systemctl start osmosisd
+sudo systemctl start persistenceCore
 ```
 
 We can check that the service is running:
 ```console
-sudo systemctl status osmosisd
+sudo systemctl status persistenceCore
 ```
 
 Check logs:
 ```console
-journalctl -f -n 200 -u osmosisd
+journalctl -f -n 200 -u persistenceCore
 ```
 
 ## Wallet preparation:
@@ -275,40 +266,45 @@ journalctl -f -n 200 -u osmosisd
 Let's generate a new key:
 ```console
 # change <wallet> to yours
-osmosisd keys add <wallet> --keyring-backend file
+persistenceCore keys add <wallet> --keyring-backend file
 ```
 
 Recover Keplr acoount. Use your `mnemonic` phrase. 
-Send token ``OSMO`` to it. 
+Send token ``XPRT`` to it. 
 
 ## Setup Validator
 
 Make transaction. to change the ``moniker``, ``from`` and ``chain-id`` and other values as required:
 ```console
 # change <wallet> to yours
-osmosisd tx staking create-validator \
+persistenceCore tx staking create-validator \
   --commission-max-change-rate 0.01 \
   --commission-max-rate 0.20 \
   --commission-rate 0.05 \
-  --amount 1100000uosmo \
-  --pubkey $(osmosisd tendermint show-validator) \
-  --chain-id osmosis-1 \
+  --amount 1000000uxprt \
+  --pubkey $(persistenceCore tendermint show-validator) \
+  --chain-id core-1 \
   --min-self-delegation "1" \
-  --gas-prices 0.1uosmo \
+  --gas-prices 0.005uxprt \
   --gas-adjustment 1.5 \
   --gas auto \
   --moniker "COIN SIDE" \
   --identity <your_keybase> \
-  --website="https://github.com/COIN-SIDE/validator" \
-  --details="Our crypto community aspires to a decentralized future" \
-  --from <wallet>
+  --website "https://github.com/COIN-SIDE/validator" \
+  --details "Our crypto community aspires to a decentralized future" \
+  --from "coinside"
   ```
 Unjail
   ```console
-  osmosisd tx slashing unjail --from <wallet> --chain-id osmosis-1 --gas-prices 0.1uosmo --gas-adjustment 1.5 --gas auto
+  persistenceCore tx slashing unjail --from <wallet> --chain-id core-1 --gas-prices 0.005uxprt --gas-adjustment 1.5 --gas auto
   ```
   
   Governance vote
   ```console
-  osmosisd tx gov vote 98 yes --from <wallet> --chain-id osmosis-1 --gas-prices 0.1uosmo --gas-adjustment 1.5 --gas auto --node "tcp://127.0.0.1:20657" -y
+  persistenceCore tx gov vote 7 yes --from <wallet> --chain-id core-1 --gas-prices 0.005uxprt --gas-adjustment 1.5 --gas auto --node "tcp://127.0.0.1:20657" -y
   ```
+
+Check high:
+```console
+curl -s localhost:26657/status | jq .result.sync_info.latest_block_height
+```
