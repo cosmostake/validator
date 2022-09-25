@@ -8,7 +8,7 @@
 
 ## [Stride](https://github.com/COIN-SIDE/validator/blob/main/guides/stride/stride_setup_validator.md)
 
-## NYM mixnode
+## [Sifchain follow node IPFS](https://github.com/COIN-SIDE/validator/blob/main/guides/sifchain/follow_node_ipfs.md)
 
 # Upgrade guides
 
