@@ -24,7 +24,7 @@ go version
 ```
 ## Install JUNO
 
-Clone the Osmosis github repository:
+Clone the Juno github repository:
 ```console
 git clone https://github.com/CosmosContracts/juno
 ```
@@ -120,7 +120,7 @@ Output
 
 This should print the version number of junod.
 
-## Initialize and Configure Osmosis node
+## Initialize and Configure Juno node
 
 Now let's initialize the node:
 ```console
