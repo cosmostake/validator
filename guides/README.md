@@ -17,3 +17,5 @@
 # Upgrade guides
 
 ## [Sifchain upgrade](https://github.com/COIN-SIDE/validator/tree/main/guides/sifchain)
+
+## [Juno upgrade](https://github.com/COIN-SIDE/validator/tree/main/guides/juno)
