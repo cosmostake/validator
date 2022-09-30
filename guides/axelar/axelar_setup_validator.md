@@ -1,4 +1,4 @@
-# Axelar
+# DRAFT! Axelar
 ``Setup validator node manually``
 
 ## install dependencies, if needed
