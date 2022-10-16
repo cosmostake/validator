@@ -1,23 +1,8 @@
-![GITHUB LOGO](https://user-images.githubusercontent.com/86729290/196028980-789c7f68-701c-4b02-bbfe-e6b81822df82.png)
+![GITHUB LOGO](https://user-images.githubusercontent.com/86729290/196029095-cc8977fc-a342-4fc0-81c2-91b7c885ce3f.png)
 
+# <h1 align="center"> COSMØSTAKE VALIDATE 10 DIFFERENT MAIN-NETS </a> 
 
-# COIN SIDE validator
-`Our crypto community aspires to a decentralized future`
-
-COIN SIDE — crypto community consisting of 10,000+ people.
-
-We are an educational platform. The main goal is to teach beginners how to use cryptocurrency, blockchain and other decentralized products. And join the decentralized future. We take the beginner by the hand and bring to the result.
-
-Our products:
-- educational platform (lessons, webinars, homework, practical tasks)
-- non-public VIP club for professionals for 1000+ people
-- validator
-
-`We also make technical and humanitarian contributions for crypto projects`
-
-To check our [mainnet validator](https://github.com/maxlevush-COINSIDE/validator#validator-mainnet), [testnet validator](https://github.com/maxlevush-COINSIDE/validator#validator-testnet), [contributions](https://github.com/maxlevush-COINSIDE/validator#contributions), [contacts](https://github.com/maxlevush-COINSIDE/validator#contacts) and [Team](https://github.com/maxlevush-COINSIDE/validator#team)
-
-# Validator mainnet
+## Mainnet
 
 ## [Osmosis](https://www.mintscan.io/osmosis/validators/osmovaloper183psjr4y05kwtpfew073q6hm84xdhp9tcn8ne7)
 
@@ -35,8 +20,6 @@ To check our [mainnet validator](https://github.com/maxlevush-COINSIDE/validator
 
 ## [Stride](https://www.mintscan.io/stride/validators/stridevaloper1ykcp0qvdyvv78vkjsz6zx4hh90g9rxmhegjd3w)
 
-# Contributions
-
 We do:
 - setup mainnet validators
 - participate in testnets 
@@ -48,11 +31,7 @@ We do:
 - blockchain governence participation
 - UI/UX design (blog pictures, 3D, digital design, memes)
 
-## [Osmosis contributions](https://github.com/COIN-SIDE/validator/tree/main/contributions)
-
-## [Joystream contributions](https://github.com/maxlevush-COINSIDE/community-repo/blob/master/contributions/fm-reports/maxlevush-2130.md)
-
-# Validator testnet
+# COSMØSTAKE validate 3 different test-nets
 
 ## [Sui](https://explorer.devnet.sui.io)
 
@@ -60,12 +39,12 @@ We do:
 
 # Contacts
 
-- [Telegram channel COIN SIDE](https://t.me/coinside_public)
 - [Youtube](https://www.youtube.com/channel/UC5VKIMlsGmlBgQESGPfYmEQ)
-- [Twitter](https://medium.com/@COIN.SIDE.VALIDATORS)
-- [Medium](https://medium.com/@COIN.SIDE.VALIDATOR)
-- Telegram @laurakhar, @maxlevush
+- [Twitter](https://twitter.com/COSM0STAKES)
+- [Medium](https://medium.com/@cosmostake)
+- Telegram @laurakhar,@maxlevush
 - Email maksim.l@coin-side.com
+- Email laurakharkevych@gmail.com
 
 # Team
 
