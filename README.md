@@ -45,7 +45,7 @@
 ### Contacts:
 
 - [Youtube](https://www.youtube.com/channel/UC5VKIMlsGmlBgQESGPfYmEQ)
-- [Twitter](https://twitter.com/COSM0STAKES)
+- [Twitter](https://twitter.com/COSM0STAKE)
 - [Medium](https://medium.com/@cosmostake)
 - Telegram @laurakhar,@maxlevush
 - Email maksim.l@coin-side.com
