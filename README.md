@@ -1,26 +1,37 @@
 ![GITHUB LOGO](https://user-images.githubusercontent.com/86729290/196029095-cc8977fc-a342-4fc0-81c2-91b7c885ce3f.png)
 
-# <h1 align="center"> COSMØSTAKE VALIDATE 10 DIFFERENT MAIN-NETS </a> 
+## <h1 align="center"> COSMØSTAKE VALIDATE 10 DIFFERENT MAIN-NETS </a> 
 
-## Mainnet
 
-## [Osmosis](https://www.mintscan.io/osmosis/validators/osmovaloper183psjr4y05kwtpfew073q6hm84xdhp9tcn8ne7)
+### Validator Mainnet:
 
-## [Juno](https://www.mintscan.io/juno/validators/junovaloper1fsa7hy2qgq8xnfpnendmch3v8035529g3cwcms)
+- [Osmosis](https://www.mintscan.io/osmosis/validators/osmovaloper183psjr4y05kwtpfew073q6hm84xdhp9tcn8ne7)
 
-## [Sifchain](https://www.mintscan.io/sifchain/validators/sifvaloper1k89razs48taq2xsjhpq8h6htm4jfyxvalwj7jj)
+- [Juno](https://www.mintscan.io/juno/validators/junovaloper1fsa7hy2qgq8xnfpnendmch3v8035529g3cwcms)
 
-## [Kichain](https://www.mintscan.io/ki-chain/validators/kivaloper1tws9ll7fmkj3tv84tamczx2llv57hrlr7vu06f)
+- [Sifchain](https://www.mintscan.io/sifchain/validators/sifvaloper1k89razs48taq2xsjhpq8h6htm4jfyxvalwj7jj)
 
-## [Persistence](https://www.mintscan.io/persistence/validators/persistencevaloper1qz6xsskhyyd6mrqns2e3empull7el0gqp5dkru)
+- [Kichain](https://www.mintscan.io/ki-chain/validators/kivaloper1tws9ll7fmkj3tv84tamczx2llv57hrlr7vu06f)
 
-## [NYM mixnode](https://mixnet.explorers.guru/mixnode/F855myXzPAv1oWyZcMRNggZMPhky3BXxBR6dJTYYBScB)
+- [Persistence](https://www.mintscan.io/persistence/validators/persistencevaloper1qz6xsskhyyd6mrqns2e3empull7el0gqp5dkru)
 
-## [Rizon](https://www.mintscan.io/rizon/validators/rizonvaloper1tg6qsuvpkcr3vxkq4z56xnhyqypkjux2krwqgd)
+- [NYM mixnode](https://mixnet.explorers.guru/mixnode/F855myXzPAv1oWyZcMRNggZMPhky3BXxBR6dJTYYBScB)
 
-## [Stride](https://www.mintscan.io/stride/validators/stridevaloper1ykcp0qvdyvv78vkjsz6zx4hh90g9rxmhegjd3w)
+- [Rizon](https://www.mintscan.io/rizon/validators/rizonvaloper1tg6qsuvpkcr3vxkq4z56xnhyqypkjux2krwqgd)
 
-We do:
+- [Stride](https://www.mintscan.io/stride/validators/stridevaloper1ykcp0qvdyvv78vkjsz6zx4hh90g9rxmhegjd3w)
+
+
+### Validator Testnet:
+
+- [Sui](https://explorer.devnet.sui.io)
+
+- [Joystream](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.joystream.org%3A9944#/staking)
+
+
+
+### We do:
+
 - setup mainnet validators
 - participate in testnets 
 - translations in 5 languages
@@ -31,13 +42,7 @@ We do:
 - blockchain governence participation
 - UI/UX design (blog pictures, 3D, digital design, memes)
 
-# COSMØSTAKE validate 3 different test-nets
-
-## [Sui](https://explorer.devnet.sui.io)
-
-## [Joystream](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.joystream.org%3A9944#/staking)
-
-# Contacts
+### Contacts:
 
 - [Youtube](https://www.youtube.com/channel/UC5VKIMlsGmlBgQESGPfYmEQ)
 - [Twitter](https://twitter.com/COSM0STAKES)
@@ -46,20 +51,19 @@ We do:
 - Email maksim.l@coin-side.com
 - Email laurakharkevych@gmail.com
 
-# Team
+### Team:
 
 - Creative Director [Laura Kharkevych](https://github.com/laura2727)
 - Developer, Technical Director [Max Levush](https://github.com/maxlevush-COINSIDE)
 - Community Developer [Yan Lytvynenko](https://github.com/ZAZIK3)
 - Web-Designer [Violetta Markush](https://github.com/vilolaa)
 
-and 20+ employees working with the education platform and the community
-
-Country:
-- Indonesia. LLC "Coin Side Corp"
+### Country:
+- Indonesia
 - Ukraine
 
-Languages:
+### Languages:
+
 - English
 - Ukrainian
 - Russian
