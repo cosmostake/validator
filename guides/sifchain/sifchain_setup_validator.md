@@ -9,7 +9,7 @@ sudo apt-get update && sudo apt upgrade -y
 ```
 Install essential tools etc:
 ```console
-sudo apt-get install make build-essential gcc git jq chrony mc htop curl -y
+sudo apt install mc wget curl git htop net-tools unzip jq build-essential ncdu tmux -y
 ```
 
 ## Install Go
