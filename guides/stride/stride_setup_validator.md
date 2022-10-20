@@ -114,7 +114,9 @@ pruning-interval = "10"
 
 ## Setup Snapshot Polkachu.com
 
-Current snapshot here https://polkachu.com/tendermint_snapshots/stride
+Current snapshot always here https://polkachu.com/tendermint_snapshots/stride
+
+It is updated every 24 hours on website `Polkachu.com`
 
 Install lz4:
 ```console
@@ -156,8 +158,8 @@ Description=Stride Node
 After=network-online.target
 
 [Service]
-User=$USER
-ExecStart=$USER/go/bin/strided start
+User=root
+ExecStart=root/go/bin/strided start
 Restart=always
 RestartSec=3
 LimitNOFILE=10000
