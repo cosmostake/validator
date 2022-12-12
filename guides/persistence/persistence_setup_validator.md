@@ -36,7 +36,7 @@ cd persistenceCore
 
 Take new release:
 ```console
-git checkout v3.1.1
+git checkout v5.0.0
 ```
 
 Compile and install:
