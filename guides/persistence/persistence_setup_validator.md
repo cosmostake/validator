@@ -186,24 +186,27 @@ pruning-keep-every = "0"
 pruning-interval = "10"
 ```
 
-## Setup Snapshot persistence.paranorm.pro
+## Setup Snapshot polkachu.com
 
 Download the snapshot:
 ```console
-cd .persistenceCore
+sudo apt install snapd -y
 ```
 ```console
-wget -O persistence_snapshot.tar.gz https://snapshot.paranorm.pro/persistence_snapshot.tar.gz
+sudo snap install lz4
+```
+```console
+wget -O persistence_9254954.tar.lz4 https://snapshots.polkachu.com/snapshots/persistence/persistence_9254954.tar.lz4 --inet4-only
 ```
 
 Decompress the snapshot to your database location:
 ```console
-tar zxf persistence_snapshot.tar.gz
+lz4 -c -d persistence_9254954.tar.lz4  | tar -x -C $HOME/.persistenceCore
 ```
 
 Remove downloaded snapshot to free up space:
 ```console
-rm -v persistence_snapshot.tar.gz
+rm -v persistence_9254954.tar.lz4
 ```
 
 ## Setup Service file
