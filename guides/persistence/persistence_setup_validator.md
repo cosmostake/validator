@@ -264,6 +264,14 @@ Check logs:
 ```console
 journalctl -f -n 200 -u persistenceCore
 ```
+## Addr book
+
+```console 
+wget -O addrbook.json https://snapshots.polkachu.com/addrbook/persistence/addrbook.json --inet4-only
+```
+```console
+mv addrbook.json ~/.persistenceCore/config
+```
 
 ## Wallet preparation:
 
