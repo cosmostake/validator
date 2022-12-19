@@ -144,7 +144,7 @@ sha256sum $HOME/.persistenceCore/config/genesis.json
 
 First do:
 ```console
-seeds="646d0ad08c408f93276f90cd29d4e410e2d60f63@xprt.paranorm.pro:25656"
+seeds="646d0ad08c408f93276f90cd29d4e410e2d60f63@xprt.paranorm.pro:25656,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:15456"
 ```
 ```console
 peers="646d0ad08c408f93276f90cd29d4e410e2d60f63@xprt.paranorm.pro:25656"
