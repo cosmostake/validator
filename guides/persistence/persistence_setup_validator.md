@@ -225,7 +225,7 @@ After=network-online.target
 
 [Service]
 User=root
-ExecStart=/root/gopath/bin/cosmovisor start
+ExecStart=/root/go/bin/cosmovisor start
 Restart=always
 RestartSec=3
 LimitNOFILE=10000
@@ -270,7 +270,7 @@ journalctl -f -n 200 -u persistenceCore
 Let's generate a new key:
 ```console
 # change <wallet> to yours
-persistenceCore keys add <wallet> --keyring-backend file
+persistenceCore keys add <wallet>
 ```
 
 Recover Keplr acoount. Use your `mnemonic` phrase. 
@@ -280,7 +280,7 @@ Send token ``XPRT`` to it.
 
 Make transaction. to change the ``moniker``, ``from`` and ``chain-id`` and other values as required:
 ```console
-# change <wallet> to yours
+# change <moniker>, <keybase>, <website>, <details>, <wallet> to yours
 persistenceCore tx staking create-validator \
   --commission-max-change-rate 0.01 \
   --commission-max-rate 0.20 \
@@ -292,23 +292,23 @@ persistenceCore tx staking create-validator \
   --gas-prices 0.005uxprt \
   --gas-adjustment 1.5 \
   --gas auto \
-  --moniker "COIN SIDE" \
-  --identity <your_keybase> \
-  --website "https://github.com/COIN-SIDE/validator" \
-  --details "Our crypto community aspires to a decentralized future" \
-  --from "coinside"
+  --moniker <moniker> \
+  --identity <keybase> \
+  --website <website> \
+  --details <details> \
+  --from <wallet>
   ```
-Unjail
+Unjail:
   ```console
   persistenceCore tx slashing unjail --from <wallet> --chain-id core-1 --gas-prices 0.005uxprt --gas-adjustment 1.5 --gas auto
   ```
   
-  Governance vote
+Governance vote:
   ```console
-  persistenceCore tx gov vote 7 yes --from <wallet> --chain-id core-1 --gas-prices 0.005uxprt --gas-adjustment 1.5 --gas auto --node "tcp://127.0.0.1:20657" -y
+  persistenceCore tx gov vote 10 yes --from <wallet> --chain-id core-1 --gas-prices 0.005uxprt --gas-adjustment 1.5 --gas auto -y
   ```
 
-Check high:
+Check block height:
 ```console
-curl -s localhost:26657/status | jq .result.sync_info.latest_block_height
+curl -s localhost:20657/status | jq .result.sync_info.latest_block_height
 ```
