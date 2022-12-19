@@ -187,6 +187,7 @@ pruning-interval = "10"
 ```
 
 ## Setup Snapshot polkachu.com
+fresh snapshot you can always find [here](https://polkachu.com/tendermint_snapshots/persistence)
 
 Download the snapshot:
 ```console
