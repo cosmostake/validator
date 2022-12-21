@@ -328,7 +328,7 @@ persistenceCore tx distribution withdraw-rewards $(persistenceCore keys show <wa
 
 Delegate to yourself (Self bonded)
 ```console
-persistenceCore tx staking delegate $(persistenceCore keys show <wallet> --bech val -a) 1000000uxki --from <wallet> --chain-id core-1 --gas-prices 0.005uxprt --gas-adjustment 1.5 --gas auto -y
+persistenceCore tx staking delegate $(persistenceCore keys show <wallet> --bech val -a) 1000000uxprt --from <wallet> --chain-id core-1 --gas-prices 0.005uxprt --gas-adjustment 1.5 --gas auto -y
 ```
 
 not for you. skip it
