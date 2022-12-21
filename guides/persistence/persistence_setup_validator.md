@@ -323,10 +323,10 @@ curl -s localhost:20657/status | jq .result.sync_info.latest_block_height
 
 Withdraw Commission And Rewards From Your Validator
 ```console
-persistenceCore tx distribution withdraw-rewards $(persistenceCore keys show coinside --bech val -a) --commission --from coinside --chain-id core-1 --gas-prices 0.005uxprt --gas-adjustment 1.5 --gas auto -y
+persistenceCore tx distribution withdraw-rewards $(persistenceCore keys show <wallet> --bech val -a) --commission --from <wallet> --chain-id core-1 --gas-prices 0.005uxprt --gas-adjustment 1.5 --gas auto -y
 ```
 
 Delegate to yourself (Self bonded)
 ```console
-persistenceCore tx staking delegate $(persistenceCore keys show coinside --bech val -a) 1000000uxki --from coinside --chain-id core-1 --gas-prices 0.005uxprt --gas-adjustment 1.5 --gas auto -y
+persistenceCore tx staking delegate $(persistenceCore keys show <wallet> --bech val -a) 1000000uxki --from <wallet> --chain-id core-1 --gas-prices 0.005uxprt --gas-adjustment 1.5 --gas auto -y
 ```
