@@ -9,7 +9,9 @@
 
 - [Juno](https://www.mintscan.io/juno/validators/junovaloper1fsa7hy2qgq8xnfpnendmch3v8035529g3cwcms)
 
-- [Sifchain](https://www.mintscan.io/sifchain/validators/sifvaloper1k89razs48taq2xsjhpq8h6htm4jfyxvalwj7jj)
+- [Umee](https://www.mintscan.io/umee/validators/umeevaloper10nlsvhss7cfzu0xugyeq8gjkcp5g4kx8gun7xx)
+
+- [Sifchain (currently on hold)](https://www.mintscan.io/sifchain/validators/sifvaloper1k89razs48taq2xsjhpq8h6htm4jfyxvalwj7jj)
 
 - [Kichain](https://www.mintscan.io/ki-chain/validators/kivaloper1tws9ll7fmkj3tv84tamczx2llv57hrlr7vu06f)
 
