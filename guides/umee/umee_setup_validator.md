@@ -101,7 +101,7 @@ Then copy the ``umeed`` binanry to the ``genesis/bin`` folder:
 cp -v $GOPATH/bin/umeed $HOME/.umee/cosmovisor/genesis/bin
 ```
 
-## Initialize and Configure Persistence node
+## Initialize and Configure Umee node
 
 Now let's initialize the node:
 ```console
@@ -120,7 +120,7 @@ Download the latest genesis file:
 curl https://raw.githubusercontent.com/umee-network/umee/main/networks/umee-1/genesis.json > $HOME/.umee/config/genesis.json
 ```
 
-## Setup Seeds and Persistance Peers
+## Setup Seeds
 
 Script for you to update ``seeds`` setting with these peers in ``config.toml``
 ```console
