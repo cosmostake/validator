@@ -358,19 +358,19 @@ After=network.target
 User=root
 Type=simple
 ExecStart=/root/gopath/bin/peggo orchestrator 0xb564ac229e9d6040a9f1298b7211b9e79ee05a2c \
-  --eth-rpc="https://eth-mainnet.g.alchemy.com/v2/0HLi6dNDLBsmcy4o0OeoXFJilYo9ev0N" \
+  --eth-rpc="https://eth-mainnet.g.alchemy.com/v2/0HLixxxxxxxxxxxxxxxxxx" \
   --relay-batches=true \
   --valset-relay-mode=minimum \
   --cosmos-chain-id=umee-1 \
   --cosmos-keyring-dir="/root/.umee" \
-  --cosmos-from="cosmostake2" \
-  --cosmos-from-passphrase="1942Xmaksimus" \
+  --cosmos-from=<wallet_orch> \
+  --cosmos-from-passphrase=<password> \
   --oracle-providers="osmosis,huobi,okx,coinbase" \
-  --eth-alchemy-ws="wss://eth-mainnet.g.alchemy.com/v2/0HLi6dNDLBsmcy4o0OeoXFJilYo9ev0N" \
+  --eth-alchemy-ws="wss://eth-mainnet.g.alchemy.com/v2/0HLixxxxxxxxxxxxxxxxxxx" \
   --cosmos-keyring="os" \
   --log-level debug \
   --log-format text
-Environment="PEGGO_ETH_PK=b8a5ee8d15980b096f6eb9c56a33bb92a45f7e5bf4573f97b448cfc09839a099"
+Environment="PEGGO_ETH_PK=b8a5exxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 Restart=on-failure
 LimitNOFILE=65535
 
