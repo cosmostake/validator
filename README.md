@@ -39,16 +39,18 @@
 - technical contributions
 - community contribution (invite many people, referrals, moderate chats)
 - blockchain governence participation
-- UI/UX design (blog pictures, 3D, digital design, memes)
+- UI/UX design (blog pictures, 3D, digital design)
 
 ### Contacts:
 
-- [Youtube](https://www.youtube.com/channel/UC5VKIMlsGmlBgQESGPfYmEQ)
+- [Web](cosmostake.com.tilda.ws)
+- [Email:] cosmostake.validator@gmail.com
+- [Email:] maksim.l@coin-side.com
+- [Email:] laurakharkevych@gmail.com
 - [Twitter](https://twitter.com/COSM0STAKE)
+- [Youtube](https://www.youtube.com/channel/UC5VKIMlsGmlBgQESGPfYmEQ)
 - [Medium](https://medium.com/@cosmostake)
 - Telegram @laurakhar,@maxlevush
-- Email maksim.l@coin-side.com
-- Email laurakharkevych@gmail.com
 
 ### Team:
 
