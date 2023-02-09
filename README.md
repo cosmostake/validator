@@ -52,7 +52,7 @@
 
 ### Team:
 
-- Creative Director [Laura Kharkevych](https://github.com/laura2727)
+- Creative Director [Laura Kharkevych](https://github.com/LauraKhar)
 - Developer, Technical Director [Max Levush](https://github.com/maxlevush-COINSIDE)
 - Community Developer [Yan Lytvynenko](https://github.com/ZAZIK3)
 - Web-Designer [Violetta Markush](https://github.com/vilolaa)
