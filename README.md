@@ -50,7 +50,6 @@
 - [Twitter](https://twitter.com/COSM0STAKE)
 - [Youtube](https://www.youtube.com/channel/UC5VKIMlsGmlBgQESGPfYmEQ)
 - [Medium](https://medium.com/@cosmostake)
-- [Telegram] @laurakhar,@maxlevush
 
 ### Team:
 
