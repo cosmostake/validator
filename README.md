@@ -31,26 +31,26 @@
 
 ### We do:
 
-- setup mainnet validators
-- participate in testnets 
-- translations in 5 languages
-- make education content (videos, guides, blogs etc) 
-- write posts/articles/guides about projects in social media
-- technical contributions
-- community contribution (invite many people, referrals, moderate chats)
-- blockchain governence participation
+- Setup mainnet validators
+- Setup testnet validators
 - UI/UX design (blog pictures, 3D, digital design)
+- Make education content (videos, guides, blogs etc) 
+- Translations in 5 languages
+- Write posts/articles/guides about projects in social media
+- Technical contributions
+- Community contribution (invite many people, referrals, moderate chats)
+- Blockchain governence participation
 
 ### Contacts:
 
 - [Web](cosmostake.com.tilda.ws)
-- [Email:] cosmostake.validator@gmail.com
-- [Email:] maksim.l@coin-side.com
-- [Email:] laurakharkevych@gmail.com
+- cosmostake.validator@gmail.com
+- maksim.l@coin-side.com
+- laurakharkevych@gmail.com
 - [Twitter](https://twitter.com/COSM0STAKE)
 - [Youtube](https://www.youtube.com/channel/UC5VKIMlsGmlBgQESGPfYmEQ)
 - [Medium](https://medium.com/@cosmostake)
-- Telegram @laurakhar,@maxlevush
+- [Telegram] @laurakhar,@maxlevush
 
 ### Team:
 
@@ -60,6 +60,7 @@
 - Web-Designer [Violetta Markush](https://github.com/vilolaa)
 
 ### Country:
+
 - Indonesia
 - Ukraine
 
