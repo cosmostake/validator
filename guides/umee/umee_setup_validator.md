@@ -447,30 +447,69 @@ threshold = "1.5"
 base = "ATOM"
 threshold = "1.5"
 
-[[currency_pairs]]
-base = "UMEE"
-providers = [
-  "okx",
-  "osmosis",
-  "mexc"
-]
-quote = "USDT"
+[[deviation_thresholds]]
+base = "USDC"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "CRO"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "DAI"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "ETH"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "WBTC"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "BNB"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "JUNO"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "OSMO"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "BTC"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "stATOM"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "stOSMO"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "IST"
+threshold = "2"
 
 [[currency_pairs]]
 base = "UMEE"
 providers = [
   "okx",
-  "osmosis",
-  "mexc"
+  "gate",
+  "mexc",
 ]
-quote = "USD"
+quote = "USDT"
 
 [[currency_pairs]]
 base = "USDT"
 providers = [
   "kraken",
-  "okx",
-  "coinbase"
+  "coinbase",
+  "binanceus",
 ]
 quote = "USD"
 
@@ -478,42 +517,183 @@ quote = "USD"
 base = "ATOM"
 providers = [
   "okx",
-  "osmosis",
-  "mexc"
+  "bitget",
 ]
 quote = "USDT"
 
 [[currency_pairs]]
 base = "ATOM"
 providers = [
-  "okx",
-  "osmosis",
-  "mexc"
+  "kraken",
 ]
 quote = "USD"
 
+[[currency_pairs]]
+base = "USDC"
+providers = [
+  "okx",
+  "bitget",
+  "kraken",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "DAI"
+providers = [
+  "okx",
+  "bitget",
+  "huobi",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "DAI"
+providers = [
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "ETH"
+providers = [
+  "okx",
+  "bitget",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "ETH"
+providers = [
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "WBTC"
+providers = [
+  "okx",
+  "bitget",
+  "crypto",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "JUNO"
+providers = [
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "JUNO"
+providers = [
+  "bitget",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "JUNO"
+providers = [
+  "osmosisv2",
+]
+quote = "ATOM"
+
+[[currency_pairs]]
+base = "CRO"
+providers = [
+  "crypto",
+  "bitget",
+  "okx",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "BNB"
+providers = [
+  "binanceus",
+  "bitget",
+  "okx",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "OSMO"
+providers = [
+  "osmosisv2",
+]
+quote = "ATOM"
+
+[[currency_pairs]]
+base = "OSMO"
+providers = [
+  "bitget",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "OSMO"
+providers = [
+  "crypto",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "BTC"
+providers = [
+  "coinbase",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "BTC"
+providers = [
+  "huobi",
+  "kraken",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "stATOM"
+providers = [
+  "osmosisv2",
+]
+quote = "ATOM"
+
+[[currency_pairs]]
+base = "stOSMO"
+providers = [
+  "osmosisv2",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "IST"
+providers = [
+  "osmosisv2",
+]
+quote = "OSMO"
+
 [account]
-address = <wallet_pfd_addr>
-chain_id = umee-1
-validator = <umee_valoper>
+address = "umee15nejfgcaanqpw25ru4arvfd0fwy6j8clccvwx4"
+chain_id = "umee-local-testnet"
+validator = "umeevaloper12tysz6mzrawenca2t3t7ltym4hfjj8a5upsn2k"
 
 [keyring]
-backend = "os"
-dir = "/root/.umee"
-pass = "${KEYRING_PASSWORD}"
+backend = "test"
+dir = "/Users/username/.umee"
 
 [rpc]
-grpc_endpoint = "localhost:${GRPC_PORT}"
+grpc_endpoint = "localhost:9090"
 rpc_timeout = "100ms"
-tmrpc_endpoint = "http://localhost:${RPC_PORT}"
+tmrpc_endpoint = "http://localhost:26657"
 
 [telemetry]
 enable-hostname = true
 enable-hostname-label = true
 enable-service-label = true
-enabled = false
-global_labels = [["chain-id", "umee-1"]]
-service-name = "pfd"
+enabled = true
+global-labels = [["chain_id", "umee-local-testnet"]]
+service-name = "price-feeder"
 prometheus-retention-time = 100
 
 [[provider_endpoints]]
