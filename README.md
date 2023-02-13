@@ -17,6 +17,8 @@
 
 - [Persistence](https://www.mintscan.io/persistence/validators/persistencevaloper1qz6xsskhyyd6mrqns2e3empull7el0gqp5dkru)
 
+- [Fetch.ai](https://www.mintscan.io/fetchai/validators/fetchvaloper1upsnujmqcceexscnpyk85dvpdjy8w45h7p5ca8)
+
 - [NYM mixnode](https://mixnet.explorers.guru/mixnode/F855myXzPAv1oWyZcMRNggZMPhky3BXxBR6dJTYYBScB)
 
 - [Rizon](https://www.mintscan.io/rizon/validators/rizonvaloper1tg6qsuvpkcr3vxkq4z56xnhyqypkjux2krwqgd)
