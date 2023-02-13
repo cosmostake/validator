@@ -16,6 +16,8 @@
 
 ## [Sifchain follow node IPFS](https://github.com/cosmostake/validator/blob/main/guides/sifchain/follow_node_ipfs.md)
 
+## [Fetch.ai](https://github.com/cosmostake/validator/blob/main/guides/fetch/fetch_setup_validator.md)
+
 # Upgrade guides
 
 ## [Sifchain upgrade](https://github.com/cosmostake/validator/tree/main/guides/sifchain)
