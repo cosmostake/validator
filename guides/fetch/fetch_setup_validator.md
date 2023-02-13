@@ -1,4 +1,4 @@
-# Persistence
+# Fetch.ai
 ``Setup validator node manually``
 
 ## install dependencies, if needed
@@ -6,7 +6,7 @@
 sudo apt update
 ```
 ```console
-sudo apt install -y curl git jq lz4 build-essential
+sudo apt install -y curl git jq lz4 build-essential htop
 ```
 ## Install Go
 
@@ -22,21 +22,21 @@ You can test that Go is installed by executing:
 ```console
 go version
 ```
-## Install Persistence
+## Install Fetch.ai
 
-Clone the Persistence github repository:
+Clone the fetchd github repository:
 ```console
-git clone https://github.com/persistenceOne/persistenceCore
+git clone https://github.com/fetchai/fetchd
 ```
 
-Go to ``persistence`` directory:
+Go to ``cd fetchd`` directory:
 ```console
-cd persistenceCore
+cd fetchd
 ```
 
 Take new release:
 ```console
-git checkout v5.0.0
+git checkout v0.10.5
 ```
 
 Compile and install:
@@ -45,10 +45,10 @@ make install
 ```
 Check that the installation was successful:
 ```console
-persistenceCore version
+fetchd version
 ```
 
-This should print the version number of persistenceCore.
+This should print the version number of fetchd.
 
 ## Setup Cosmovisor
 
@@ -89,73 +89,48 @@ cd $HOME
 
 First, create the required directories:
 ```console
-mkdir -p $HOME/.persistenceCore/cosmovisor/genesis/bin
+mkdir -p ~/.fetchd/cosmovisor/genesis/bin
 ```
 ```console
-mkdir $HOME/.persistenceCore/cosmovisor/upgrades
+mkdir -p ~/.fetchd/cosmovisor/upgrades
 ```
 
-Then copy the ``persistenceCore`` binanry to the ``genesis/bin`` folder:
+Then copy the ``fetchd`` binanry to the ``genesis/bin`` folder:
 ```console
-cp $GOPATH/bin/persistenceCore $HOME/.persistenceCore/cosmovisor/genesis/bin
-```
-Now we need to add some environment variables that Cosmovisor is dependent on:
-```console
-export DAEMON_HOME=$HOME/.persistenceCore
-export DAEMON_RESTART_AFTER_UPGRADE=true
-export DAEMON_ALLOW_DOWNLOAD_BINARIES=false
-export DAEMON_NAME=persistenceCore
-export UNSAFE_SKIP_BACKUP=true
+cp ~/go/bin/fetchd ~/.fetchd/cosmovisor/genesis/bin
 ```
 
-Check everything done:
-```console
-cosmovisor version
-```
-
-This should print the version number of persistenceCore.
-
-## Initialize and Configure Persistence node
+## Initialize and Configure fetch node
 
 Now let's initialize the node:
 ```console
 NODE_MONIKER=<YOUR_NODE_MONIKER>
 ```
+
 ```console
-persistenceCore config chain-id core-1
-```
-```console
-persistenceCore init $NODE_MONIKER --chain-id core-1
+fetchd init NODE_MONIKER --chain-id fetchhub-4
 ```
 
 ## Download the latest Genesis File
 
 Download the latest genesis file:
 ```console
-curl https://raw.githubusercontent.com/persistenceOne/networks/master/core-1/final_genesis.json > $HOME/.persistenceCore/config/genesis.json
+wget -O genesis.json https://snapshots.polkachu.com/genesis/fetch/genesis.json --inet4-only
 ```
 
-Check the genesis file:
 ```console
-sha256sum $HOME/.persistenceCore/config/genesis.json
+mv genesis.json ~/.fetchd/config
 ```
 
-## Setup Seeds and Persistance Peers
+## Setup Seeds
 
-First do:
+Script for you to update ``seeds`` setting with these peers in ``config.toml``
 ```console
-seeds="646d0ad08c408f93276f90cd29d4e410e2d60f63@xprt.paranorm.pro:25656,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:15456"
-```
-```console
-peers="646d0ad08c408f93276f90cd29d4e410e2d60f63@xprt.paranorm.pro:25656"
-```
-Script for you to update ``persistent_peers`` and ``seeds`` setting with these peers in ``config.toml``
-```console
-sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.persistenceCore/config/config.toml
+sed -i 's/seeds = ""/seeds = "ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:15256"/' ~/.fetchd/config/config.toml
 ```
 Minimum-gas-prices
 ```console
-sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.005uxprt"|g' $HOME/.persistenceCore/config/app.toml
+sed -i 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0afet"|g' $HOME/.fetchd/config/app.toml
 ```
 
 Check. Don't be lazy:
@@ -167,16 +142,16 @@ cat config.toml
 
 Settings:
 ```console
-sed -i 's|pruning = "default"|pruning = "custom"|g' $HOME/.persistenceCore/config/app.toml
+sed -i 's|pruning = "default"|pruning = "custom"|g' $HOME/.fetchd/config/app.toml
 ```
 ```console
-sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.persistenceCore/config/app.toml
+sed -i 's|pruning-keep-recent = "0"|pruning-keep-recent = "100"|g' $HOME/.fetchd/config/app.toml
 ```
 ```console
-sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.persistenceCore/config/app.toml
+sed -i 's|pruning-interval = "0"|pruning-interval = "10"|g' $HOME/.fetchd/config/app.toml
 ```
 ```console
-sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/g' $HOME/.persistenceCore/config/app.toml
+sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/g' $HOME/.fetchd/config/app.toml
 ```
 
 Pruning:
@@ -187,7 +162,7 @@ pruning-interval = "10"
 ```
 
 ## Setup Snapshot polkachu.com
-fresh snapshot you can always find [here](https://polkachu.com/tendermint_snapshots/persistence)
+fresh snapshot you can always find [here](https://polkachu.com/tendermint_snapshots/fetch)
 
 Download the snapshot:
 ```console
@@ -197,30 +172,30 @@ sudo apt install snapd -y
 sudo snap install lz4
 ```
 ```console
-wget -O persistence_9254954.tar.lz4 https://snapshots.polkachu.com/snapshots/persistence/persistence_9254954.tar.lz4 --inet4-only
+wget -O fetch_9797958.tar.lz4 https://snapshots.polkachu.com/snapshots/fetch/fetch_9797958.tar.lz4 --inet4-only
 ```
 
 Decompress the snapshot to your database location:
 ```console
-lz4 -c -d persistence_9254954.tar.lz4  | tar -x -C $HOME/.persistenceCore
+lz4 -c -d fetch_9797958.tar.lz4  | tar -x -C $HOME/.fetchd
 ```
 
 Remove downloaded snapshot to free up space:
 ```console
-rm -v persistence_9254954.tar.lz4
+rm -v fetch_9797958.tar.lz4
 ```
 
 ## Setup Service file
 
 Use editor ``nano``:
 ```console
-nano /etc/systemd/system/persistenceCore.service
+nano /etc/systemd/system/fetch.service
 ```
 
 Output:
 ```
 [Unit]
-Description=Persistence Node
+Description="fetch node"
 After=network-online.target
 
 [Service]
@@ -228,49 +203,48 @@ User=root
 ExecStart=/root/go/bin/cosmovisor start
 Restart=always
 RestartSec=3
-LimitNOFILE=10000
-Environment="DAEMON_NAME=persistenceCore"
-Environment="DAEMON_HOME=/root/.persistenceCore"
+LimitNOFILE=4096
+Environment="DAEMON_NAME=fetchd"
+Environment="DAEMON_HOME=/root/.fetchd"
 Environment="DAEMON_ALLOW_DOWNLOAD_BINARIES=false"
 Environment="DAEMON_RESTART_AFTER_UPGRADE=true"
-Environment="DAEMON_LOG_BUFFER_SIZE=512"
 Environment="UNSAFE_SKIP_BACKUP=true"
 
 [Install]
 WantedBy=multi-user.target
 ```
 
-Let's try to start ``persistenceCore``. First reload the systemctl daemon:
+Let's try to start ``fetchd``. First reload the systemctl daemon:
 ```console
 sudo -S systemctl daemon-reload
 ```
 
-Then enable the ``persistenceCore`` service:
+Then enable the ``fetchd`` service:
 ```console
-sudo -S systemctl enable persistenceCore
+sudo -S systemctl enable fetchd
 ```
 
-We can now start ``persistenceCore``:
+We can now start ``fetchd``:
 ```console
-sudo systemctl start persistenceCore
+sudo systemctl start fetchd
 ```
 
 We can check that the service is running:
 ```console
-sudo systemctl status persistenceCore
+sudo systemctl status fetchd
 ```
 
 Check logs:
 ```console
-journalctl -f -n 200 -u persistenceCore
+journalctl -f -n 200 -u fetchd
 ```
 ## Addr book
 
 ```console 
-wget -O addrbook.json https://snapshots.polkachu.com/addrbook/persistence/addrbook.json --inet4-only
+wget -O addrbook.json https://snapshots.polkachu.com/addrbook/fetch/addrbook.json --inet4-only
 ```
 ```console
-mv addrbook.json ~/.persistenceCore/config
+mv addrbook.json ~/.fetchd/config
 ```
 
 ## Wallet preparation:
@@ -278,26 +252,25 @@ mv addrbook.json ~/.persistenceCore/config
 Let's generate a new key:
 ```console
 # change <wallet> to yours
-persistenceCore keys add <wallet>
+fetchd keys add <wallet>
 ```
 
 Recover Keplr acoount. Use your `mnemonic` phrase. 
-Send token ``XPRT`` to it. 
+Send token ``FET`` to it. 
 
 ## Setup Validator
 
 Make transaction. to change the ``moniker``, ``from`` and ``chain-id`` and other values as required:
 ```console
 # change <moniker>, <keybase>, <website>, <details>, <wallet> to yours
-persistenceCore tx staking create-validator \
+fetchd tx staking create-validator \
   --commission-max-change-rate 0.01 \
   --commission-max-rate 0.20 \
   --commission-rate 0.05 \
-  --amount 1000000uxprt \
-  --pubkey $(persistenceCore tendermint show-validator) \
-  --chain-id core-1 \
+  --amount 1000000000000000000afet \
+  --pubkey $(fetchd tendermint show-validator) \
+  --chain-id fetchhub-4 \
   --min-self-delegation "1" \
-  --gas-prices 0.005uxprt \
   --gas-adjustment 1.5 \
   --gas auto \
   --moniker <moniker> \
@@ -308,30 +281,25 @@ persistenceCore tx staking create-validator \
   ```
 Unjail:
   ```console
-  persistenceCore tx slashing unjail --from <wallet> --chain-id core-1 --gas-prices 0.005uxprt --gas-adjustment 1.5 --gas auto
+  fetchd tx slashing unjail --from <wallet> --chain-id fetchhub-4 --gas-adjustment 1.5 --gas auto
   ```
   
 Governance vote:
   ```console
-  persistenceCore tx gov vote 10 yes --from <wallet> --chain-id core-1 --gas-prices 0.005uxprt --gas-adjustment 1.5 --gas auto -y
+  fetchd tx gov vote 10 yes --from <wallet> --chain-id fetchhub-4 --gas-adjustment 1.5 --gas auto -y
   ```
 
 Check block height:
 ```console
-curl -s localhost:20657/status | jq .result.sync_info.latest_block_height
+curl -s localhost:26657/status | jq .result.sync_info.latest_block_height
 ```
 
 Withdraw Commission And Rewards From Your Validator
 ```console
-persistenceCore tx distribution withdraw-rewards $(persistenceCore keys show <wallet> --bech val -a) --commission --from <wallet> --chain-id core-1 --gas-prices 0.005uxprt --gas-adjustment 1.5 --gas auto -y
+fetchd tx distribution withdraw-rewards $(fetchd keys show <wallet> --bech val -a) --commission --from <wallet> --chain-id fetchhub-4 --gas-adjustment 1.5 --gas auto -y
 ```
 
 Delegate to yourself (Self bonded)
 ```console
-persistenceCore tx staking delegate $(persistenceCore keys show <wallet> --bech val -a) 1000000uxprt --from <wallet> --chain-id core-1 --gas-prices 0.005uxprt --gas-adjustment 1.5 --gas auto -y
-```
-
-not for you. skip it
-```console
---node "tcp://127.0.0.1:20657"
+fetchd tx staking delegate $(fetchd keys show <wallet> --bech val -a) 1000000000000000000afet --from <wallet> --chain-id fetchhub-4 --gas-adjustment 1.5 --gas auto -y
 ```
