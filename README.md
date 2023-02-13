@@ -44,9 +44,7 @@
 ### Contacts:
 
 - [Web](cosmostake.com.tilda.ws)
-- cosmostake.validator@gmail.com
-- maksim.l@coin-side.com
-- laurakharkevych@gmail.com
+- [Email](cosmostake.validator@gmail.com)
 - [Twitter](https://twitter.com/COSM0STAKE)
 - [Youtube](https://www.youtube.com/channel/UC5VKIMlsGmlBgQESGPfYmEQ)
 - [Medium](https://medium.com/@cosmostake)
