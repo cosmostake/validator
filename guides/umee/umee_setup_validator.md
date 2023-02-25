@@ -295,8 +295,6 @@ UMEE_CHAIN="umee-1"
 UMEE_HOME="$HOME/.umee"
 ```
 ```console
-
-```console
 MAIN_ADDR=$(umeed keys show <wallet> -a --home /root/.umee)
 ```
 ```console
