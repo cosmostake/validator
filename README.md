@@ -9,7 +9,7 @@
 
 - [Juno](https://www.mintscan.io/juno/validators/junovaloper1fsa7hy2qgq8xnfpnendmch3v8035529g3cwcms)
 
-- [Umee](https://www.mintscan.io/umee/validators/umeevaloper10nlsvhss7cfzu0xugyeq8gjkcp5g4kx8gun7xx)
+- [Umee](https://www.mintscan.io/umee/validators/umeevaloper14w25sj0y6r8xfvh4jpek4qtqqwpx9flwnhsu90)
 
 - [Sifchain (currently on hold)](https://www.mintscan.io/sifchain/validators/sifvaloper1k89razs48taq2xsjhpq8h6htm4jfyxvalwj7jj)
 
