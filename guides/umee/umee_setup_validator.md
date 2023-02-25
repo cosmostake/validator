@@ -313,7 +313,7 @@ echo $ORCH_ADDR
 echo 'export ORCH_ADDR='${ORCH_ADDR} >> $HOME/.bash_profile
 ```
 ```console
-UMEE_VALOPER=$(umeed keys show $MAIN_WALLET --bech val -a --home $UMEE_HOME)
+UMEE_VALOPER=$(umeed keys show <wallet> --bech val -a --home $UMEE_HOME)
 ```
 ```console
 echo $UMEE_VALOPER
