@@ -201,7 +201,7 @@ After=network-online.target
 
 [Service]
 User=root
-ExecStart=/root/gopath/bin/cosmovisor start
+ExecStart=/root/go/bin/cosmovisor start
 Restart=always
 RestartSec=3
 LimitNOFILE=10000
