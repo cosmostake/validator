@@ -1,4 +1,4 @@
-# IBC relayer Umee
+# IBC relayer Persistence <> Stride
 ``Setup relayer manually``
 
 Don't forget to check `go` version first:
