@@ -29,6 +29,8 @@
 
 ### Validator Testnet:
 
+- [Persistence](https://testnet.mintscan.io/persistence-testnet/validators/persistencevaloper16af2kgt0q2v9ks38pe4chlxk7hjqqykzy4q9gv)
+
 - [Sui](https://explorer.devnet.sui.io)
 
 - [Nibiru](https://nibiru.explorers.guru/validator/nibivaloper1sep4dyhsefef2lwvv46l3enqz0rt8du453yc8u)
