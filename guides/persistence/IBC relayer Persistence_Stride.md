@@ -90,13 +90,13 @@ How should `~/.relayer/config/config.yaml` look:
 global:
     api-listen-addr: :5183
     timeout: 10s
-    memo: cosmostake
+    memo: You have been relayed by COSMØSTAKE
     light-cache-size: 20
 chains:
     persistence:
         type: cosmos
         value:
-            key: cosmostake
+            key: <wallet>
             chain-id: core-1
             rpc-addr: https://rpc-persistence.architectnodes.com:443
             account-prefix: persistence
@@ -112,7 +112,7 @@ chains:
     stride:
         type: cosmos
         value:
-            key: cosmostake1
+            key: <wallet1>
             chain-id: stride-1
             rpc-addr: https://stride.nodejumper.io:443
             account-prefix: stride
