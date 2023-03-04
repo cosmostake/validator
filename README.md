@@ -31,6 +31,8 @@
 
 - [Sui](https://explorer.devnet.sui.io)
 
+- [Nibiru](https://nibiru.explorers.guru/validator/nibivaloper1sep4dyhsefef2lwvv46l3enqz0rt8du453yc8u)
+
 ### We do:
 
 - Setup mainnet validators
