@@ -27,6 +27,10 @@
 
 - [Joystream](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.joystream.org%3A9944#/staking)
 
+### IBC-relayer:
+
+[Persistence](https://www.mintscan.io/persistence/account/persistence1lywqn3rj3uh3tt9ez2jp28z0tjpc2ewa97qrnz) <> [Stride](https://www.mintscan.io/stride/account/stride1z9vqynvye6dch4qpz404n9e2nma7v6a3pkww0e)
+
 ### Validator Testnet:
 
 - [Persistence](https://testnet.mintscan.io/persistence-testnet/validators/persistencevaloper16af2kgt0q2v9ks38pe4chlxk7hjqqykzy4q9gv)
