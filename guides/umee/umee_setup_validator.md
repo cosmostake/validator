@@ -36,7 +36,7 @@ cd umee
 
 Take new release:
 ```console
-git checkout v3.3.0
+git checkout v4.1.0
 ```
 
 Compile and install:
@@ -70,7 +70,7 @@ cd cosmos-sdk
 
 Take new release:
 ```console
-git checkout v0.45.8
+git checkout v0.46.7
 ```
 
 Compile and install:
@@ -173,17 +173,17 @@ sudo apt install snapd -y
 sudo snap install lz4
 ```
 ```console
-wget -O umee_4524860.tar.lz4 https://snapshots.polkachu.com/snapshots/umee/umee_4524860.tar.lz4 --inet4-only
+wget -O umee_5489209.tar.lz4 https://snapshots.polkachu.com/snapshots/umee/umee_5489209.tar.lz4 --inet4-only
 ```
 
 Decompress the snapshot to your database location:
 ```console
-lz4 -c -d umee_4524860.tar.lz4  | tar -x -C $HOME/.umee
+lz4 -c -d umee_5489209.tar.lz4  | tar -x -C $HOME/.umee
 ```
 
 Remove downloaded snapshot to free up space:
 ```console
-rm -v umee_4524860.tar.lz4
+rm -v umee_5489209.tar.lz4
 ```
 
 ## Setup Service file
