@@ -69,7 +69,7 @@ cd cosmos-sdk
 
 Take new release:
 ```console
-git checkout v0.45.8
+git checkout v0.45.12
 ```
 
 Compile and install:
