@@ -79,7 +79,7 @@ make cosmovisor
 
 Then copy the ``cosmovisor`` binanry to the ``genesis/bin`` folder:
 ```console
-cp cosmovisor/cosmovisor $GOPATH/bin/cosmovisor
+cp -v cosmovisor/cosmovisor $GOPATH/bin/cosmovisor
 ```
 ```console
 cd $HOME
