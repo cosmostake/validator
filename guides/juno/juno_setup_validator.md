@@ -36,7 +36,7 @@ cd juno
 
 Take new release:
 ```console
-git checkout v9.0.0
+git checkout v12.0.0
 ```
 
 Compile and install:
