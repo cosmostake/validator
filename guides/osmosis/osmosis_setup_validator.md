@@ -36,7 +36,7 @@ cd osmosis
 
 Take new release:
 ```console
-git checkout v11.0.0
+git checkout v14.0.0
 ```
 
 Compile and install:
