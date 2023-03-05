@@ -189,7 +189,7 @@ rm -v fetch_9797958.tar.lz4
 
 Use editor ``nano``:
 ```console
-nano /etc/systemd/system/fetch.service
+nano /etc/systemd/system/fetchd.service
 ```
 
 Output:
