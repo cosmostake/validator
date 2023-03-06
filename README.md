@@ -67,8 +67,8 @@
 
 ### Contacts:
 
-- [Web](cosmostake.com.tilda.ws)
-- Email: cosmostake.validator@gmail.com
+- Web: [www.cosmostake.space](https://cosmostake.space)
+- Email: info@cosmostake.space
 - [Twitter](https://twitter.com/COSM0STAKE)
 - [Youtube](https://www.youtube.com/channel/UC5VKIMlsGmlBgQESGPfYmEQ)
 - [Medium](https://medium.com/@cosmostake)
