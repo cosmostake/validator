@@ -47,6 +47,8 @@
 
 - [Persistence](https://testnet.mintscan.io/persistence-testnet/validators/persistencevaloper16af2kgt0q2v9ks38pe4chlxk7hjqqykzy4q9gv)
 
+- [Umee](https://explorer.network.umee.cc/canon-2/staking/umeevaloper1c6vtj9gejmc3twvwme0hy40hfshe0p8qy9aghs)
+
 - [Sui](https://explorer.devnet.sui.io)
 
 - [Nibiru](https://nibiru.explorers.guru/validator/nibivaloper1sep4dyhsefef2lwvv46l3enqz0rt8du453yc8u)
