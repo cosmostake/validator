@@ -31,6 +31,10 @@
 
 - [Persistence channel-67](https://www.mintscan.io/persistence/account/persistence1lywqn3rj3uh3tt9ez2jp28z0tjpc2ewa97qrnz) <> [Stride channel-53](https://www.mintscan.io/stride/account/stride1z9vqynvye6dch4qpz404n9e2nma7v6a3pkww0e)
 
+- [Persistence channel-37](https://www.mintscan.io/persistence/account/persistence1quylzmjgq8crgh8fnqmj48jp8mxlzyhszyrkn9) <> [Juno channel-33](https://www.mintscan.io/juno/account/juno1p9u4glx4sjcx863xxvj05n8zdrzzhd7h5s63kp)
+
+- [Persistence channel-6](https://www.mintscan.io/persistence/account/persistence1quylzmjgq8crgh8fnqmj48jp8mxlzyhszyrkn9) <> [Osmosis channel-4](https://www.mintscan.io/osmosis/account/osmo16wtdntpcal8zldu0k3eltqn26pchd8csrtv7tk)
+
 - [Osmosis channel-229](https://www.mintscan.io/osmosis/account/osmo16wtdntpcal8zldu0k3eltqn26pchd8csrtv7tk) <> [Fetch.ai channel-10](https://www.mintscan.io/fetchai/account/fetch1xq07dgza58ufkhf0fdqs9ses89pfns3vvcuf4u)
 
 - [Osmosis channel-42](https://www.mintscan.io/osmosis/account/osmo16wtdntpcal8zldu0k3eltqn26pchd8csrtv7tk) <> [Juno channel-0](https://www.mintscan.io/juno/account/juno1p9u4glx4sjcx863xxvj05n8zdrzzhd7h5s63kp)
@@ -41,7 +45,7 @@
 
 - [Juno channel-139](https://www.mintscan.io/juno/account/juno1p9u4glx4sjcx863xxvj05n8zdrzzhd7h5s63kp) <> [Stride channel-24](https://www.mintscan.io/stride/account/stride1z9vqynvye6dch4qpz404n9e2nma7v6a3pkww0e)
 
-- [Persistence channel-37](https://www.mintscan.io/persistence/account/persistence1lywqn3rj3uh3tt9ez2jp28z0tjpc2ewa97qrnz) <> [Juno channel-33](https://www.mintscan.io/juno/account/juno1p9u4glx4sjcx863xxvj05n8zdrzzhd7h5s63kp)
+
 
 ### Validator Testnet:
 
