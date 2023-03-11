@@ -115,7 +115,7 @@ cosmovisor version
 
 Output 
 ```
-12.0.0
+13.0.0
 ```
 
 This should print the version number of junod.
