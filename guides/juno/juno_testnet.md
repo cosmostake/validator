@@ -287,32 +287,32 @@ To request tokens type `$request <your-public-address>` in the message field and
 
 ## Setup Validator
 
-Make transaction. to change the ``moniker``, ``from`` and ``chain-id`` and other values as required:
+Make transaction. to change the ``moniker``, ``from`` and ``website`` and other values as required:
 ```console
 # change <wallet> to yours
 junod tx staking create-validator \
   --commission-max-change-rate 0.01 \
   --commission-max-rate 0.20 \
   --commission-rate 0.05 \
-  --amount 1000000ujuno \
+  --amount 1000000ujunox \
   --pubkey $(junod tendermint show-validator) \
-  --chain-id juno-1 \
+  --chain-id uni-6 \
   --min-self-delegation "1" \
-  --gas-prices 0.1ujuno \
+  --gas-prices 0.01ujunox \
   --gas-adjustment 1.5 \
   --gas auto \
-  --moniker "COIN SIDE" \
-  --identity <your_keybase> \
-  --website="https://github.com/COIN-SIDE/validator" \
-  --details="Our crypto community aspires to a decentralized future" \
+  --moniker "COSMØSTAKE" \
+  --identity <keybase> \
+  --website <website> \
+  --details <details> \
   --from <wallet>
   ```
 Unjail
   ```console
-  junod tx slashing unjail --from <wallet> --chain-id juno-1 --gas-prices 0.1ujuno --gas-adjustment 1.5 --gas auto -y
+  junod tx slashing unjail --from <wallet> --chain-id uni-6 --gas-prices 0.01ujunox --gas-adjustment 1.5 --gas auto -y
   ```
   
   Governance vote
   ```console
-  junod tx gov vote 30 yes --from <wallet> --chain-id juno-1 --gas-prices 0.1ujuno --gas-adjustment 1.5 --gas auto -y
+  junod tx gov vote 1 yes --from <wallet> --chain-id uni-6 --gas-prices 0.01ujunox --gas-adjustment 1.5 --gas auto -y
   ```
