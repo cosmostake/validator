@@ -191,6 +191,7 @@ pruning-interval = "10"
 
 ## Setup Snapshot Polkachu.com
 Current version of snapshot always avaible [here](https://polkachu.com/testnets/juno/snapshots)
+
 Install lz4:
 ```console
 sudo apt install snapd -y
