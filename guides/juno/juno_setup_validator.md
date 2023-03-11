@@ -295,7 +295,7 @@ junod tx staking create-validator \
   --gas-prices 0.1ujuno \
   --gas-adjustment 1.5 \
   --gas auto \
-  --moniker "COIN SIDE" \
+  --moniker <moniker> \
   --identity <your_keybase> \
   --website="https://github.com/COIN-SIDE/validator" \
   --details="Our crypto community aspires to a decentralized future" \
