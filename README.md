@@ -53,6 +53,8 @@
 
 - [Umee](https://explorer.network.umee.cc/canon-2/staking/umeevaloper1c6vtj9gejmc3twvwme0hy40hfshe0p8qy9aghs)
 
+- [Juno](https://testnet.mintscan.io/juno-testnet/validators/junovaloper12mclkvsuu5v5lxkrv3suzddc653elhgc5nahrf)
+
 - [Sui](https://explorer.devnet.sui.io)
 
 - [Nibiru](https://nibiru.explorers.guru/validator/nibivaloper1sep4dyhsefef2lwvv46l3enqz0rt8du453yc8u)
