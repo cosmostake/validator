@@ -40,12 +40,17 @@
 
 ### RPC Testnet:
 
-- Umee
+- [Umee](https://umee-testnet-rpc.cosmostake.space)
 ```console
 https://umee-testnet-rpc.cosmostake.space 
 ```
 
-- Juno
+- [Persistence](https://persistence-testnet-rpc.cosmostake.space/)
+```console
+https://persistence-testnet-rpc.cosmostake.space
+```
+
+- [Juno](https://juno-testnet-rpc.cosmostake.space)
 ```console
 https://juno-testnet-rpc.cosmostake.space
 ```
