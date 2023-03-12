@@ -59,7 +59,7 @@
 
 - [Nibiru](https://nibiru.explorers.guru/validator/nibivaloper1sep4dyhsefef2lwvv46l3enqz0rt8du453yc8u)
 
-### RPC testnet:
+### RPC Testnet:
 
 - Umee
 ```console
