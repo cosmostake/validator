@@ -25,6 +25,12 @@
 
 - [Joystream](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.joystream.org%3A9944#/staking)
 
+### RPC Mainnet:
+
+- [Persistence](https://persistence-mainnet-rpc.cosmostake.space)
+```console
+https://persistence-mainnet-rpc.cosmostake.space
+```
 
 ### Validator Testnet:
 
