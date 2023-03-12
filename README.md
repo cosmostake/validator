@@ -59,6 +59,19 @@
 
 - [Nibiru](https://nibiru.explorers.guru/validator/nibivaloper1sep4dyhsefef2lwvv46l3enqz0rt8du453yc8u)
 
+### RPC testnet:
+
+- Umee
+```console
+https://umee-testnet-rpc.cosmostake.space 
+```
+
+- Juno
+```console
+https://juno-testnet-rpc.cosmostake.space
+```
+
+
 ### We do:
 
 - Setup mainnet validators
