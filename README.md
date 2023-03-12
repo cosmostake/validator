@@ -32,6 +32,11 @@
 https://persistence-mainnet-rpc.cosmostake.space
 ```
 
+- [Umee](https://umee-mainnet-rpc.cosmostake.space/)
+```console
+https://umee-mainnet-rpc.cosmostake.space
+```
+
 ### Validator Testnet:
 
 - [Persistence](https://testnet.mintscan.io/persistence-testnet/validators/persistencevaloper16af2kgt0q2v9ks38pe4chlxk7hjqqykzy4q9gv)
