@@ -25,21 +25,37 @@
 
 - [Joystream](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.joystream.org%3A9944#/staking)
 
-### RPC Mainnet:
+### Endpoits Mainnet:
 
-- [Persistence](https://persistence-mainnet-rpc.cosmostake.space)
+- [Persistence RPC](https://persistence-mainnet-rpc.cosmostake.space)
 ```console
 https://persistence-mainnet-rpc.cosmostake.space
 ```
 
-- [Umee](https://umee-mainnet-rpc.cosmostake.space/)
+- [Umee RPC](https://umee-mainnet-rpc.cosmostake.space/)
 ```console
 https://umee-mainnet-rpc.cosmostake.space
 ```
+- [Umee gRPC](http://umee-mainnet-grpc.cosmostake.space/)
+```console
+http://umee-mainnet-grpc.cosmostake.space
+```
+- [Umee REST](https://umee-mainnet-rest.cosmostake.space/)
+```console
+https://umee-mainnet-rest.cosmostake.space
+```
 
-- [Juno](https://juno-mainnet-rpc.cosmostake.space/)
+- [Juno RPC](https://juno-mainnet-rpc.cosmostake.space/)
 ```console
 https://juno-mainnet-rpc.cosmostake.space
+```
+- [Juno gRPC](http://juno-mainnet-grpc.cosmostake.space/)
+```console
+http://juno-mainnet-grpc.cosmostake.space
+```
+- [Juno REST](https://juno-mainnet-rest.cosmostake.space/)
+```console
+https://juno-mainnet-rest.cosmostake.space
 ```
 
 ### Validator Testnet:
@@ -61,7 +77,7 @@ https://juno-mainnet-rpc.cosmostake.space
 https://umee-testnet-rpc.cosmostake.space 
 ```
 
-- [Umee gRPC](https://umee-testnet-grpc.cosmostake.space)
+- [Umee gRPC](http://umee-testnet-grpc.cosmostake.space)
 ```console
 http://umee-testnet-grpc.cosmostake.space 
 ```
@@ -81,7 +97,7 @@ https://persistence-testnet-rpc.cosmostake.space
 https://juno-testnet-rpc.cosmostake.space
 ```
 
-- [Juno gRPC](https://juno-testnet-grpc.cosmostake.space)
+- [Juno gRPC](http://juno-testnet-grpc.cosmostake.space)
 ```console
 http://juno-testnet-grpc.cosmostake.space
 ```
