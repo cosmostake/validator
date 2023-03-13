@@ -25,7 +25,7 @@
 
 - [Joystream](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.joystream.org%3A9944#/staking)
 
-### Endpoits Mainnet:
+### Endpoints Mainnet:
 
 - [Persistence RPC](https://persistence-mainnet-rpc.cosmostake.space)
 ```console
@@ -70,7 +70,7 @@ https://juno-mainnet-rest.cosmostake.space
 
 - [Nibiru](https://nibiru.explorers.guru/validator/nibivaloper1sep4dyhsefef2lwvv46l3enqz0rt8du453yc8u)
 
-### Endpoits Testnet:
+### Endpoints Testnet:
 
 - [Umee RPC](https://umee-testnet-rpc.cosmostake.space)
 ```console
