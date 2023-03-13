@@ -106,6 +106,8 @@ http://juno-testnet-grpc.cosmostake.space
 ```console
 https://juno-testnet-rest.cosmostake.space
 ```
+
+### IBC relayers [here](https://github.com/cosmostake/ibc-relayers)
 ### We do:
 
 - Setup mainnet validators
