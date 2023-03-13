@@ -54,24 +54,42 @@ https://juno-mainnet-rpc.cosmostake.space
 
 - [Nibiru](https://nibiru.explorers.guru/validator/nibivaloper1sep4dyhsefef2lwvv46l3enqz0rt8du453yc8u)
 
-### RPC Testnet:
+### Endpoits Testnet:
 
-- [Umee](https://umee-testnet-rpc.cosmostake.space)
+- [Umee RPC](https://umee-testnet-rpc.cosmostake.space)
 ```console
 https://umee-testnet-rpc.cosmostake.space 
 ```
 
-- [Persistence](https://persistence-testnet-rpc.cosmostake.space/)
+- [Umee gRPC](https://umee-testnet-grpc.cosmostake.space)
+```console
+https://umee-testnet-grpc.cosmostake.space 
+```
+
+- [Umee REST](https://umee-testnet-rest.cosmostake.space)
+```console
+https://umee-testnet-rest.cosmostake.space 
+```
+
+- [Persistence RPC](https://persistence-testnet-rpc.cosmostake.space/)
 ```console
 https://persistence-testnet-rpc.cosmostake.space
 ```
 
-- [Juno](https://juno-testnet-rpc.cosmostake.space)
+- [Juno RPC](https://juno-testnet-rpc.cosmostake.space)
 ```console
 https://juno-testnet-rpc.cosmostake.space
 ```
 
+- [Juno gRPC](https://juno-testnet-grpc.cosmostake.space)
+```console
+https://juno-testnet-grpc.cosmostake.space
+```
 
+- [Juno REST](https://juno-testnet-rest.cosmostake.space)
+```console
+https://juno-testnet-rest.cosmostake.space
+```
 ### We do:
 
 - Setup mainnet validators
