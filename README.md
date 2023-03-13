@@ -63,7 +63,7 @@ https://umee-testnet-rpc.cosmostake.space
 
 - [Umee gRPC](https://umee-testnet-grpc.cosmostake.space)
 ```console
-https://umee-testnet-grpc.cosmostake.space 
+http://umee-testnet-grpc.cosmostake.space 
 ```
 
 - [Umee REST](https://umee-testnet-rest.cosmostake.space)
@@ -83,7 +83,7 @@ https://juno-testnet-rpc.cosmostake.space
 
 - [Juno gRPC](https://juno-testnet-grpc.cosmostake.space)
 ```console
-https://juno-testnet-grpc.cosmostake.space
+http://juno-testnet-grpc.cosmostake.space
 ```
 
 - [Juno REST](https://juno-testnet-rest.cosmostake.space)
