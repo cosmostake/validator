@@ -1,4 +1,5 @@
-![GITHUB LOGO](https://user-images.githubusercontent.com/86729290/196029095-cc8977fc-a342-4fc0-81c2-91b7c885ce3f.png)
+![Git Banner](https://user-images.githubusercontent.com/123416278/224935686-e174f738-e014-472a-a2b7-98fb6d7629fd.png)
+
 
 ## <h1 align="center"> COSMØSTAKE VALIDATE 10 DIFFERENT MAINNETS </a> 
 
