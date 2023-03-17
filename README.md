@@ -6,23 +6,23 @@
 
 ### Validator Mainnet:
 
-- [Osmosis](https://www.mintscan.io/osmosis/validators/osmovaloper183psjr4y05kwtpfew073q6hm84xdhp9tcn8ne7)
-
-- [Juno](https://www.mintscan.io/juno/validators/junovaloper1fsa7hy2qgq8xnfpnendmch3v8035529g3cwcms)
+- [Persistence](https://www.mintscan.io/persistence/validators/persistencevaloper1qz6xsskhyyd6mrqns2e3empull7el0gqp5dkru)
 
 - [Umee](https://www.mintscan.io/umee/validators/umeevaloper14w25sj0y6r8xfvh4jpek4qtqqwpx9flwnhsu90)
 
-- [Sifchain](https://www.mintscan.io/sifchain/validators/sifvaloper1k89razs48taq2xsjhpq8h6htm4jfyxvalwj7jj)
-
-- [Kichain](https://www.mintscan.io/ki-chain/validators/kivaloper1tws9ll7fmkj3tv84tamczx2llv57hrlr7vu06f)
-
-- [Persistence](https://www.mintscan.io/persistence/validators/persistencevaloper1qz6xsskhyyd6mrqns2e3empull7el0gqp5dkru)
+- [Juno](https://www.mintscan.io/juno/validators/junovaloper1fsa7hy2qgq8xnfpnendmch3v8035529g3cwcms)
 
 - [Fetch.ai](https://www.mintscan.io/fetchai/validators/fetchvaloper1upsnujmqcceexscnpyk85dvpdjy8w45h7p5ca8)
+
+- [Osmosis](https://www.mintscan.io/osmosis/validators/osmovaloper183psjr4y05kwtpfew073q6hm84xdhp9tcn8ne7)
+
+- [Kichain](https://www.mintscan.io/ki-chain/validators/kivaloper1tws9ll7fmkj3tv84tamczx2llv57hrlr7vu06f)
 
 - [Rizon](https://www.mintscan.io/rizon/validators/rizonvaloper1tg6qsuvpkcr3vxkq4z56xnhyqypkjux2krwqgd)
 
 - [Stride](https://www.mintscan.io/stride/validators/stridevaloper1ykcp0qvdyvv78vkjsz6zx4hh90g9rxmhegjd3w)
+
+- [Sifchain](https://www.mintscan.io/sifchain/validators/sifvaloper1k89razs48taq2xsjhpq8h6htm4jfyxvalwj7jj)
 
 - [Joystream](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.joystream.org%3A9944#/staking)
 
