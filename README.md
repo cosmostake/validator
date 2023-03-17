@@ -1,7 +1,7 @@
 ![Git Banner](https://user-images.githubusercontent.com/123416278/224935686-e174f738-e014-472a-a2b7-98fb6d7629fd.png)
 
 
-## <h1 align="center"> COSMØSTAKE VALIDATE 10 DIFFERENT MAINNETS </a> 
+## <h1 align="center"> COSMØSTAKE VALIDATE 11 DIFFERENT MAINNETS </a> 
 
 
 ### Validator Mainnet:
