@@ -6,6 +6,8 @@
 
 ### Validator Mainnet:
 
+- [KYVE](https://www.mintscan.io/kyve/validators/kyvevaloper1rauqk7v8lyg4xc8l0scp85lf9rrpr46zmjn47u)
+
 - [Persistence](https://www.mintscan.io/persistence/validators/persistencevaloper1qz6xsskhyyd6mrqns2e3empull7el0gqp5dkru)
 
 - [Umee](https://www.mintscan.io/umee/validators/umeevaloper14w25sj0y6r8xfvh4jpek4qtqqwpx9flwnhsu90)
