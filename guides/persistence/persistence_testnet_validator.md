@@ -1,4 +1,4 @@
-# Persistence
+# Persistence Testnet
 ``Setup validator node manually``
 
 ## install dependencies, if needed
