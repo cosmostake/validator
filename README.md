@@ -30,33 +30,33 @@
 
 ### Endpoints Mainnet:
 
-- [Persistence RPC](https://persistence-mainnet-rpc.cosmostake.space)
+- Persistence RPC
 ```console
 https://persistence-mainnet-rpc.cosmostake.space
 ```
 
-- [Umee RPC](https://umee-mainnet-rpc.cosmostake.space/)
+- Umee RPC
 ```console
 https://umee-mainnet-rpc.cosmostake.space
 ```
-- [Umee gRPC](http://umee-mainnet-grpc.cosmostake.space/)
+- Umee gRPC
 ```console
 http://umee-mainnet-grpc.cosmostake.space
 ```
-- [Umee REST](https://umee-mainnet-rest.cosmostake.space/)
+- Umee REST
 ```console
 https://umee-mainnet-rest.cosmostake.space
 ```
 
-- [Juno RPC](https://juno-mainnet-rpc.cosmostake.space/)
+- Juno RPC
 ```console
 https://juno-mainnet-rpc.cosmostake.space
 ```
-- [Juno gRPC](http://juno-mainnet-grpc.cosmostake.space/)
+- Juno gRPC
 ```console
 http://juno-mainnet-grpc.cosmostake.space
 ```
-- [Juno REST](https://juno-mainnet-rest.cosmostake.space/)
+- Juno REST
 ```console
 https://juno-mainnet-rest.cosmostake.space
 ```
@@ -75,37 +75,37 @@ https://juno-mainnet-rest.cosmostake.space
 
 ### Endpoints Testnet:
 
-- [Umee RPC](https://umee-testnet-rpc.cosmostake.space)
+- Umee RPC
 ```console
 https://umee-testnet-rpc.cosmostake.space 
 ```
 
-- [Umee gRPC](http://umee-testnet-grpc.cosmostake.space)
+- Umee gRPC
 ```console
 http://umee-testnet-grpc.cosmostake.space 
 ```
 
-- [Umee REST](https://umee-testnet-rest.cosmostake.space)
+- Umee REST
 ```console
 https://umee-testnet-rest.cosmostake.space 
 ```
 
-- [Persistence RPC](https://persistence-testnet-rpc.cosmostake.space/)
+- Persistence RPC
 ```console
 https://persistence-testnet-rpc.cosmostake.space
 ```
 
-- [Juno RPC](https://juno-testnet-rpc.cosmostake.space)
+- Juno RPC
 ```console
 https://juno-testnet-rpc.cosmostake.space
 ```
 
-- [Juno gRPC](http://juno-testnet-grpc.cosmostake.space)
+- Juno gRPC
 ```console
 http://juno-testnet-grpc.cosmostake.space
 ```
 
-- [Juno REST](https://juno-testnet-rest.cosmostake.space)
+- Juno REST
 ```console
 https://juno-testnet-rest.cosmostake.space
 ```
