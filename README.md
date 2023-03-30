@@ -97,9 +97,12 @@ https://persistence-testnet-rpc.cosmostake.space
 
 - Juno
 ```console
-https://juno-testnet-rpc.cosmostake.space <RPC>
-http://juno-testnet-grpc.cosmostake.space <gRPC>
-https://juno-testnet-rest.cosmostake.space <API REST>
+# RPC
+https://juno-testnet-rpc.cosmostake.space
+# gRPC
+http://juno-testnet-grpc.cosmostake.space 
+# API REST
+https://juno-testnet-rest.cosmostake.space
 ```
 
 ### IBC relayers [here](https://github.com/cosmostake/ibc-relayers)
