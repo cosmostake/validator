@@ -30,34 +30,29 @@
 
 ### Endpoints Mainnet:
 
-- Persistence RPC
+- Persistence
 ```console
+# RPC
 https://persistence-mainnet-rpc.cosmostake.space
 ```
 
-- Umee RPC
+- Umee
 ```console
+# RPC
 https://umee-mainnet-rpc.cosmostake.space
-```
-- Umee gRPC
-```console
+# gRPC
 http://umee-mainnet-grpc.cosmostake.space
-```
-- Umee REST
-```console
+# API REST
 https://umee-mainnet-rest.cosmostake.space
 ```
 
-- Juno RPC
+- Juno
 ```console
+# RPC
 https://juno-mainnet-rpc.cosmostake.space
-```
-- Juno gRPC
-```console
+# gRPC
 http://juno-mainnet-grpc.cosmostake.space
-```
-- Juno REST
-```console
+# API REST
 https://juno-mainnet-rest.cosmostake.space
 ```
 
@@ -75,24 +70,20 @@ https://juno-mainnet-rest.cosmostake.space
 
 ### Endpoints Testnet:
 
-- Umee RPC
+- Persistence
 ```console
-https://umee-testnet-rpc.cosmostake.space 
-```
-
-- Umee gRPC
-```console
-http://umee-testnet-grpc.cosmostake.space 
-```
-
-- Umee REST
-```console
-https://umee-testnet-rest.cosmostake.space 
-```
-
-- Persistence RPC
-```console
+# RPC
 https://persistence-testnet-rpc.cosmostake.space
+```
+
+- Umee
+```console
+# RPC
+https://umee-testnet-rpc.cosmostake.space
+# gRPC
+http://umee-testnet-grpc.cosmostake.space 
+# API REST
+https://umee-testnet-rest.cosmostake.space 
 ```
 
 - Juno
