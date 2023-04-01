@@ -74,6 +74,10 @@ https://juno-mainnet-rest.cosmostake.space
 ```console
 # RPC
 https://persistence-testnet-rpc.cosmostake.space
+# gRPC
+http://persistence-testnet-grpc.cosmostake.space 
+# API REST
+https://persistence-testnet-rest.cosmostake.space 
 ```
 
 - Umee
