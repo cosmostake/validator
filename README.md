@@ -34,6 +34,10 @@
 ```console
 # RPC
 https://persistence-mainnet-rpc.cosmostake.space
+# gRPC
+http://persistence-mainnet-grpc.cosmostake.space 
+# API REST
+https://persistence-mainnet-rest.cosmostake.space 
 ```
 
 - Umee
