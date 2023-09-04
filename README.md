@@ -1,7 +1,7 @@
 ![Git Banner](https://user-images.githubusercontent.com/123416278/224935686-e174f738-e014-472a-a2b7-98fb6d7629fd.png)
 
 
-## <h1 align="center"> COSMØSTAKE VALIDATE 11 DIFFERENT MAINNETS </a> 
+## <h1 align="center"> COSMØSTAKE VALIDATE MAINNETS </a> 
 
 
 ### Validator Mainnet:
@@ -20,11 +20,7 @@
 
 - [Kichain](https://www.mintscan.io/ki-chain/validators/kivaloper1tws9ll7fmkj3tv84tamczx2llv57hrlr7vu06f)
 
-- [Rizon](https://www.mintscan.io/rizon/validators/rizonvaloper1tg6qsuvpkcr3vxkq4z56xnhyqypkjux2krwqgd)
-
 - [Stride](https://www.mintscan.io/stride/validators/stridevaloper1ykcp0qvdyvv78vkjsz6zx4hh90g9rxmhegjd3w)
-
-- [Sifchain](https://www.mintscan.io/sifchain/validators/sifvaloper1k89razs48taq2xsjhpq8h6htm4jfyxvalwj7jj)
 
 - [Joystream](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.joystream.org%3A9944#/staking)
 
