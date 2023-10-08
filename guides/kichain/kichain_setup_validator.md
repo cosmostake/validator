@@ -10,12 +10,26 @@ sudo apt install -y curl git jq lz4 build-essential
 ```
 ## Install Go
 
-If you need to update or install 'go' we'd recommend to use the handy go version manager called g. To install 'go' with it use:
+To install 'go' with it use:
 ```console
-curl -sSL https://git.io/g-install | sh -s
+sudo rm -rvf /usr/local/go/
 ```
 ```console
-source ~/.bashrc
+wget https://golang.org/dl/go1.19.10.linux-amd64.tar.gz
+```
+```console
+sudo tar -C /usr/local -xzf go1.19.10.linux-amd64.tar.gz
+```
+```console
+rm go1.19.10.linux-amd64.tar.gz
+```
+
+## Configure Go
+```console
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export GO111MODULE=on
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 ```
 
 You can test that Go is installed by executing:
@@ -26,23 +40,24 @@ go version
 
 Clone the Osmosis github repository:
 ```console
-git clone https://github.com/KiFoundation/ki-tools.git
+git clone https://github.com/KiFoundation/ki-tools kichain
 ```
 
-Go to ``ki-tools`` directory:
+Go to ``kichain`` directory:
 ```console
-cd ki-tools
+cd kichain
 ```
 
 Take new release:
 ```console
-git checkout 3.0.0
+git checkout 5.0.2
 ```
 
 Compile and install:
 ```console
 make install
 ```
+
 Check that the installation was successful:
 ```console
 kid version
@@ -204,17 +219,17 @@ Download the snapshot:
 cd
 ```
 ```console
-wget -O kichain_11412789.tar.lz4 https://snapshots1.polkachu.com/snapshots/kichain/kichain_11412789.tar.lz4
+wget -O kichain_17383816.tar.lz4 https://snapshots.polkachu.com/snapshots/kichain/kichain_17383816.tar.lz4 --inet4-only
 ```
 
 Decompress the snapshot to your database location:
 ```console
-lz4 -c -d kichain_11412789.tar.lz4  | tar -x -C $HOME/.kid
+lz4 -c -d kichain_17383816.tar.lz4  | tar -x -C $HOME/.kid
 ```
 
 Remove downloaded snapshot to free up space:
 ```console
-rm -v kichain_11412789.tar.lz4
+rm -v kichain_17383816.tar.lz4
 ```
 
 ## Setup Service file
