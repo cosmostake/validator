@@ -36,7 +36,7 @@ cd umee
 
 Take new release:
 ```console
-git checkout v4.1.0-rc4
+git checkout v6.1.0
 ```
 
 Compile and install:
@@ -60,21 +60,24 @@ NODE_MONIKER=<YOUR_NODE_MONIKER>
 ```
 
 ```console
-umeed init $NODE_MONIKER --chain-id canon-2
+umeed init $NODE_MONIKER --chain-id canon-4
 ```
 
 ## Download the latest Genesis File
 
 Download the latest genesis file:
 ```console
-curl https://raw.githubusercontent.com/umee-network/umee/main/networks/canon-2/genesis.json > $HOME/.umee/config/genesis.json
+wget https://canon-4.rpc.network.umee.cc/genesis
+mv -v $HOME/genesis $HOME/.umee/config/genesis.json
 ```
+Remove ``{"jsonrpc":"2.0","id":-1,"result":{"genesis":`` from the start and ``}}`` from the end to create the genesis file.
 
-## Setup Seeds
+## Setup Peers
 
-Script for you to update ``seeds`` setting with these peers in ``config.toml``
 ```console
-sed -i 's/seeds = ""/seeds = "ab9e8d7227a3199c2832018eec42ade5bf47e71d@35.215.72.45:26656,e89407a37d2ebe0dfa2291c5240abe3a5410995f@35.212.203.22:26656"/' ~/.umee/config/config.toml
+val-1 = ee7d691781717cbd1bf6f965dc45aad19c7af05f@canon-4.network.umee.cc:10000
+val-2 = dfd1d83b668ff2e59dc1d601a4990d1bd95044ba@canon-4.network.umee.cc:10001
+val-3 = e25008728d8f800383561d5ce68cff2d6bfc3826@canon-4.network.umee.cc:10002
 ```
 
 Check. Don't be lazy:
@@ -188,170 +191,19 @@ Let's generate a new key:
 umeed keys add <wallet>
 ```
 ```console
-# change <wallet_orch> to yours
-umeed keys add <wallet_orch>
-```
-```console
 # change <wallet_pfd> to yours
 umeed keys add <wallet_pfd>
 ```
 
 Recover Keplr acoount. Use your `mnemonic` phrase. 
-Faucet Goerli https://faucet.triangleplatform.com/ethereum/goerli
-Faucet Canon-2 https://faucet.umee.cc/
-
-## Setup Peggo
-
-```console
-git clone https://github.com/umee-network/peggo.git
-```
-```console
-cd peggo
-```
-Take the latest version:
-```console
-git checkout v1.4.0
-```
-```console
-make install
-```
-To check:
-```console
-peggo version
-```
-Output:
-```
-version: v1.4.0
-commit: 30f87edb6f73e659ec12fba465e00aaa414e137b
-sdk: v0.46.7-umee
-go: go1.19.1 linux/amd64
-```
-
-## Var
-```console
-UMEE_CHAIN="umee-1"
-```
-```console
-UMEE_HOME="$HOME/.umee"
-```
-```console
-MAIN_ADDR=$(umeed keys show <wallet> -a --home /root/.umee)
-```
-```console
-echo $MAIN_ADDR
-```
-```console
-echo 'export MAIN_ADDR='${MAIN_ADDR} >> $HOME/.bash_profile
-```
-```console
-ORCH_ADDR=$(umeed keys show <wallet_orch> -a --home $UMEE_HOME)
-```
-```console
-echo $ORCH_ADDR
-```
-```console
-echo 'export ORCH_ADDR='${ORCH_ADDR} >> $HOME/.bash_profile
-```
-```console
-UMEE_VALOPER=$(umeed keys show <wallet> --bech val -a --home $UMEE_HOME)
-```
-```console
-echo $UMEE_VALOPER
-```
-```console
-echo 'export UMEE_VALOPER='${UMEE_VALOPER} >> $HOME/.bash_profile
-```
-```console
-BRIDGE_ADDR="0xb564ac229e9d6040a9f1298b7211b9e79ee05a2c"
-```
-```console
-# Private key of PEGGO_ETH_ADDR (0x7d318xxxxxxxxxxxxxxxxxxxxxxxxxxxx)
-PEGGO_ETH_PK="78bcffc6a73dxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-```
-```console
-ETH_RPC="https://eth-mainnet.g.alchemy.com/v2/0HLixxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-```
-```console
-ALCHEMY_ENDPOINT="wss://eth-goerli.g.alchemy.com/v2/0HLixxxxxxxxxxxxxxxxxxxxxxxxx"
-```
-```console
-ORCHESTRATOR_WALLET_NAME="<wallet_orch>"
-```
-```console
-KEYRING_PASSWORD="<your wallet_orch password>"
-```
-
-## Service file Peggo
-
-```console
-nano /etc/systemd/system/peggo.service
-```
-Output (copy and paste):
-```console
-[Unit]
-Description=Peggo Service
-After=network.target
-
-[Service]
-User=root
-Type=simple
-ExecStart=/root/go/bin/peggo orchestrator 0x4d6D7b1dF43C9dE926BeC5F733980Ad7da6D9486 \
-  --eth-rpc="https://eth-goerli.g.alchemy.com/xxxxxxxxxx" \
-  --relay-batches=true \
-  --valset-relay-mode=minimum \
-  --cosmos-chain-id=canon-2 \
-  --cosmos-keyring-dir="/root/.umee" \
-  --cosmos-from=<wallet_orch> \
-  --cosmos-from-passphrase="password" \
-  --oracle-providers="osmosis,huobi,okx,coinbase,osmosisv2,binance,binanceus,crypto" \
-  --eth-alchemy-ws="wss://eth-goerli.g.alchemy.com/v2/bxxxxxxxxxx" \
-  --cosmos-keyring="os" \
-  --log-level debug \
-  --log-format text
-Environment="PEGGO_ETH_PK=630184582c0xxxxxxxxxx"
-Restart=on-failure
-LimitNOFILE=65535
-
-[Install]
-WantedBy=multi-user.target
-```
-
-Let's try to start ``peggo``. First reload the systemctl daemon:
-```console
-sudo -S systemctl daemon-reload
-```
-
-Then enable the ``peggo`` service:
-```console
-sudo -S systemctl enable peggo
-```
-
-We can now start ``peggo``:
-```console
-sudo systemctl start peggo
-```
-
-We can check that the service is running:
-```console
-sudo systemctl status peggo
-```
-
-Check logs:
-```console
-journalctl -f -n 200 -u peggo
-```
-
-## Register orchestrator keys
-```console
-umeed tx gravity set-orchestrator-address <umee_valoper> <wallet_orch_addr> <PEGGO_ETH_ADDR> --from <wallet> --chain-id canon-2  --fees 30000uumee --home /root/.umee
-```
+Faucet Canon-4 https://faucet.umee.cc/
 
 ## Install price-feeder
 ```console
 cd $HOME/umee/price-feeder
 ```
 ```console
-git checkout price-feeder/v2.1.0
+git checkout price-feeder/umee/v2.1.7
 ```
 ```console
 make install
@@ -365,13 +217,21 @@ nano $HOME/price-feeder_config/price-feeder.toml
 ```
 Output:
 ```
-gas_adjustment = 1
+gas_adjustment = 1.03
 
 [server]
 listen_addr = "0.0.0.0:7171"
 read_timeout = "20s"
 verbose_cors = true
 write_timeout = "20s"
+
+[[deviation_thresholds]]
+base = "MARS"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "CMST"
+threshold = "1.5"
 
 [[deviation_thresholds]]
 base = "USDT"
@@ -402,8 +262,8 @@ base = "ETH"
 threshold = "2"
 
 [[deviation_thresholds]]
-base = "WBTC"
-threshold = "1.5"
+base = "BTC"
+threshold = "2"
 
 [[deviation_thresholds]]
 base = "BNB"
@@ -429,10 +289,77 @@ threshold = "2"
 base = "IST"
 threshold = "2"
 
+[[deviation_thresholds]]
+base = "AKT"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "LUNA"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "WAXL"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "MATIC"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "DOT"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "stkATOM"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "qATOM"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "CBETH"
+threshold = "1.5"
+
+[[deviation_thresholds]]
+base = "stJUNO"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "USK"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "stUMEE"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "RETH"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "LINK"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "WETH"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "WBTC"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "NCT"
+threshold = "2"
+
+[[deviation_thresholds]]
+base = "SOMM"
+threshold = "2"
+
 [[currency_pairs]]
 base = "UMEE"
 providers = [
-  "okx",
   "gate",
 ]
 quote = "USDT"
@@ -440,7 +367,7 @@ quote = "USDT"
 [[currency_pairs]]
 base = "UMEE"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "ATOM"
 
@@ -449,14 +376,20 @@ base = "USDT"
 providers = [
   "kraken",
   "coinbase",
-  "binanceus",
+  "crypto",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "USDC"
+providers = [
+  "kraken",
 ]
 quote = "USD"
 
 [[currency_pairs]]
 base = "ATOM"
 providers = [
-  "okx",
   "bitget",
 ]
 quote = "USDT"
@@ -465,14 +398,13 @@ quote = "USDT"
 base = "ATOM"
 providers = [
   "kraken",
-  "binanceus",
+  "crypto",
 ]
 quote = "USD"
 
 [[currency_pairs]]
 base = "USDC"
 providers = [
-  "okx",
   "bitget",
   "kraken",
 ]
@@ -481,7 +413,6 @@ quote = "USDT"
 [[currency_pairs]]
 base = "DAI"
 providers = [
-  "okx",
   "bitget",
   "huobi",
 ]
@@ -497,7 +428,6 @@ quote = "USD"
 [[currency_pairs]]
 base = "ETH"
 providers = [
-  "okx",
   "bitget",
 ]
 quote = "USDT"
@@ -512,7 +442,6 @@ quote = "USD"
 [[currency_pairs]]
 base = "WBTC"
 providers = [
-  "okx",
   "bitget",
   "crypto",
 ]
@@ -523,23 +452,21 @@ base = "CRO"
 providers = [
   "crypto",
   "bitget",
-  "okx",
 ]
 quote = "USDT"
 
 [[currency_pairs]]
 base = "BNB"
 providers = [
-  "binanceus",
+  "mexc",
   "bitget",
-  "okx",
 ]
 quote = "USDT"
 
 [[currency_pairs]]
 base = "OSMO"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "ATOM"
 
@@ -559,35 +486,260 @@ providers = [
 quote = "USD"
 
 [[currency_pairs]]
+base = "WETH"
+providers = [
+  "eth-uniswap"
+]
+
+quote = "USDC"
+[[currency_pairs.pair_address_providers]]
+address = "0x88e6a0c2ddd26feeb64f039a2c41296fcb3f5640"
+provider = "eth-uniswap"
+
+[[currency_pairs]]
+base = "WBTC"
+providers = [
+  "eth-uniswap"
+]
+
+quote = "WETH"
+[[currency_pairs.pair_address_providers]]
+address = "0xcbcdf9626bc03e24f779434178a73a0b4bad62ed"
+provider = "eth-uniswap"
+
+[[currency_pairs]]
+base = "CBETH"
+providers = [
+  "eth-uniswap"
+]
+
+quote = "WETH"
+[[currency_pairs.pair_address_providers]]
+address = "0x840deeef2f115cf50da625f7368c24af6fe74410"
+provider = "eth-uniswap"
+
+[[currency_pairs]]
+base = "LINK"
+providers = [
+  "eth-uniswap"
+]
+
+quote = "WETH"
+[[currency_pairs.pair_address_providers]]
+address = "0xa6cc3c2531fdaa6ae1a3ca84c2855806728693e8"
+provider = "eth-uniswap"
+
+[[currency_pairs]]
 base = "stATOM"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "ATOM"
 
 [[currency_pairs]]
 base = "stOSMO"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "OSMO"
 
 [[currency_pairs]]
 base = "IST"
 providers = [
-  "osmosisv2",
+  "osmosis",
 ]
 quote = "OSMO"
 
+[[currency_pairs]]
+base = "IST"
+providers = [
+  "crescent",
+]
+quote = "USDC"
+
+[[currency_pairs]]
+base = "USDC"
+providers = [
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "AKT"
+quote = "USDT"
+providers = [ "huobi", "gate",]
+
+[[currency_pairs]]
+base = "AKT"
+quote = "USD"
+providers = [ "kraken", "crypto",]
+
+[[currency_pairs]]
+base = "JUNO"
+quote = "USDT"
+providers = [ "bitget", "mexc",]
+
+[[currency_pairs]]
+base = "JUNO"
+quote = "USD"
+providers = [ "kraken",]
+
+[[currency_pairs]]
+base = "JUNO"
+quote = "ATOM"
+providers = [ "osmosis",]
+
+[[currency_pairs]]
+base = "LUNA"
+quote = "USDT"
+providers = [ "gate", "huobi", "bitget",]
+
+[[currency_pairs]]
+base = "WAXL"
+providers = [
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "WAXL"
+providers = [
+  "huobi",
+  "bitget",
+  "gate",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "DOT"
+providers = [
+  "kraken",
+  "coinbase",
+  "crypto",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "DOT"
+providers = [
+  "gate",
+  "bitget",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "MATIC"
+providers = [
+  "coinbase",
+  "kraken",
+]
+quote = "USD"
+
+[[currency_pairs]]
+base = "MATIC"
+providers = [
+  "gate",
+  "mexc",
+  "bitget",
+]
+quote = "USDT"
+
+[[currency_pairs]]
+base = "stkATOM"
+providers = [
+  "osmosis",
+]
+quote = "ATOM"
+
+[[currency_pairs]]
+base = "qATOM"
+providers = [
+  "osmosis",
+]
+quote = "ATOM"
+
+[[currency_pairs]]
+base = "CBETH"
+quote = "USD"
+providers = [ "coinbase",]
+
+[[currency_pairs]]
+base = "CMST"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "MARS"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "stJUNO"
+providers = [
+  "osmosis",
+]
+quote = "JUNO"
+
+[[currency_pairs]]
+base = "USK"
+providers = [
+  "kujira",
+]
+quote = "USDC"
+
+[[currency_pairs]]
+base = "stUMEE"
+providers = [
+  "osmosis",
+]
+quote = "UMEE"
+
+[[currency_pairs]]
+base = "RETH"
+providers = [
+  "eth-uniswap",
+]
+
+quote = "WETH"
+[[currency_pairs.pair_address_providers]]
+address = "0xa4e0faA58465A2D369aa21B3e42d43374c6F9613"
+provider = "eth-uniswap"
+
+
+[[currency_pairs]]
+base = "NCT"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "SOMM"
+providers = [
+  "osmosis",
+]
+quote = "OSMO"
+
+[[currency_pairs]]
+base = "SOMM"
+providers = [
+  "gate",
+]
+quote = "USDT"
+
 [account]
-address = "umee1xqe3w5drsdr4s70t2vvvvvvv"
-chain_id = "canon-2"
-validator = "umeevaloper12tysz6mzrawevvvvvvv"
+address = "umee1..."
+chain_id = "canon-4"
+validator = "umeevaloper1"
 
 [keyring]
-backend = "test"
-dir = "/root/.umee"
-pass = "1942Xmaksimus"
+backend = "os"
+dir = "/home/.umee"
+pass = ""
 
 [rpc]
 grpc_endpoint = "localhost:9090"
@@ -599,7 +751,7 @@ enable-hostname = true
 enable-hostname-label = true
 enable-service-label = true
 enabled = true
-global-labels = [["chain_id", "canon-2"]]
+global-labels = [["chain_id", "canon-4"]]
 service-name = "price-feeder"
 prometheus-retention-time = 100
 
@@ -609,15 +761,24 @@ rest = "https://api1.binance.com"
 websocket = "stream.binance.com:9443"
 
 [[provider_endpoints]]
-name = "osmosisv2"
-rest = "https://api.osmo-api.prod.network.umee.cc"
-websocket = "api.osmo-api.prod.network.umee.cc"
+name = "osmosis"
+rest = "https://api.osmo-api.prod.ojo.network"
+websocket = "api.osmo-api.prod.ojo.network"
 
+[[provider_endpoints]]
+name = "crescent"
+rest = "https://api.cresc-api.prod.ojo.network"
+websocket = "api.cresc-api.prod.ojo.network"
 
+[[provider_endpoints]]
+name = "eth-uniswap"
+rest = "http://104.197.233.185:8000/subgraphs/name/ojo-network/unidexer"
+websocket = "not supported"
 ```
+
 Create service:
 ```console
-nano /etc/systemd/system/pfd.service
+nano /etc/systemd/system/price-feeder.service
 ```
 Output:
 ```
@@ -636,34 +797,34 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 ```
 
-Let's try to start ``pfd``. First reload the systemctl daemon:
+Let's try to start ``price-feeder``. First reload the systemctl daemon:
 ```console
 sudo -S systemctl daemon-reload
 ```
 
-Then enable the ``pfd`` service:
+Then enable the ``price-feeder`` service:
 ```console
-sudo -S systemctl enable pfd
+sudo -S systemctl enable price-feeder
 ```
 
-We can now start ``pfd``:
+We can now start ``price-feeder``:
 ```console
-sudo systemctl start pfd
+sudo systemctl start price-feeder
 ```
 
 We can check that the service is running:
 ```console
-sudo systemctl status pfd
+sudo systemctl status price-feeder
 ```
 
 Check logs:
 ```console
-journalctl -f -n 200 -u pfd
+journalctl -f -n 200 -u price-feeder
 ```
 
 ## Delegate price-feeder address
 ```console
-umeed tx oracle delegate-feed-consent <wallet_addr> <wallet_pfd_addr> --fees 30000uumee --chain-id canon-2
+umeed tx oracle delegate-feed-consent <wallet_addr> <wallet_pfd_addr> --fees 30000uumee --chain-id canon-4
 ```
 
 ## Setup Validator
@@ -674,17 +835,17 @@ Make transaction. to change the ``moniker``, ``from`` and ``chain-id`` and other
 umeed tx staking create-validator \
   --commission-max-change-rate 0.01 \
   --commission-max-rate 0.20 \
-  --commission-rate 0.10 \
-  --amount 10000000uumee \
+  --commission-rate 0.05 \
+  --amount 1000000uumee \
   --pubkey $(umeed tendermint show-validator) \
-  --chain-id canon-2 \
+  --chain-id canon-4 \
   --min-self-delegation "1" \
   --gas-prices 0.1uumee \
   --gas-adjustment 1.5 \
   --gas auto \
-  --moniker "COSMØSTAKE" \
-  --identity "xxxx" \
-  --website "https://cosmostake.space" \
-  --details "Our crypto community aspires to a decentralized future. Check Twitter https://twitter.com/COSM0STAKE" \
-  --from xxxx
+  --moniker <moniker> \
+  --identity <keybase> \
+  --website <website> \
+  --details <details> \
+  --from <wallet>
   ```
