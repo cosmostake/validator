@@ -54,11 +54,21 @@ http://juno-mainnet-grpc.cosmostake.space
 https://juno-mainnet-rest.cosmostake.space
 ```
 
+- Kichain
+```console
+# RPC
+https://kichain-mainnet-rpc.cosmostake.space
+# gRPC
+http://kichain-mainnet-grpc.cosmostake.space
+# API REST
+https://kichain-mainnet-rest.cosmostake.space
+```
+
 ### Validator Testnet:
 
 - [Persistence](https://testnet.mintscan.io/persistence-testnet/validators/persistencevaloper16af2kgt0q2v9ks38pe4chlxk7hjqqykzy4q9gv)
 
-- [Umee](https://explorer.network.umee.cc/canon-2/staking/umeevaloper1c6vtj9gejmc3twvwme0hy40hfshe0p8qy9aghs)
+- [Umee](https://explorer.network.umee.cc/Canon-4/staking/umeevaloper1765sj3nv93p7cs97wjzzzf3f36p9eenel768st)
 
 - [Juno](https://testnet.mintscan.io/juno-testnet/validators/junovaloper12mclkvsuu5v5lxkrv3suzddc653elhgc5nahrf)
 
