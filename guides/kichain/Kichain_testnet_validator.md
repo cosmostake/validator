@@ -55,7 +55,7 @@ git checkout 5.0.2-beta
 
 Compile and install:
 ```console
-make install
+make build-testnet
 ```
 Or
 ```console
