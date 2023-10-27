@@ -72,7 +72,7 @@ https://kichain-mainnet-rest.cosmostake.space
 
 - [Juno](https://testnet.mintscan.io/juno-testnet/validators/junovaloper12mclkvsuu5v5lxkrv3suzddc653elhgc5nahrf)
 
-- [Sui](https://explorer.devnet.sui.io)
+- [Kichain](https://kichain-t-4.blockchain.ki/validator/tkivaloper1y8e8467gpsnfx5c048l53ks4al95wne73fn8gw)
 
 - [Nibiru](https://nibiru.explorers.guru/validator/nibivaloper1sep4dyhsefef2lwvv46l3enqz0rt8du453yc8u)
 
