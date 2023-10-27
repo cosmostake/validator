@@ -229,26 +229,16 @@ kid tx staking create-validator \
   --commission-max-change-rate 0.01 \
   --commission-max-rate 0.20 \
   --commission-rate 0.05 \
-  --amount 10000000uxki \
+  --amount 9900000000utki \
   --pubkey $(kid tendermint show-validator) \
-  --chain-id kichain-2 \
+  --chain-id kichain-t-4 \
   --min-self-delegation "1" \
-  --gas-prices 0.1uxki \
+  --gas-prices 0.25utki \
   --gas-adjustment 1.5 \
   --gas auto \
   --moniker "COSMØSTAKE" \
-  --identity <your_keybase> \
+  --identity "" \
   --website "" \
-  --details "Our crypto community aspires to a decentralized future" \
-  --from <wallet> \
-  --node "tcp://127.0.0.1:20657"
-  ```
-Unjail
-  ```console
-  kid tx slashing unjail --from <wallet> --chain-id kichain-2 --gas-prices 0.1uxki --gas-adjustment 1.5 --gas auto --node "tcp://127.0.0.1:20657"
-  ```
-  
-  Governance vote
-  ```console
-  kid tx gov vote 98 yes --from <wallet> --chain-id kichain-2 --gas-prices 0.1uxki --gas-adjustment 1.5 --gas auto --node "tcp://127.0.0.1:20657" -y
+  --details "" \
+  --from ""
   ```
