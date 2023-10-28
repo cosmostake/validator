@@ -108,6 +108,16 @@ http://juno-testnet-grpc.cosmostake.space
 https://juno-testnet-rest.cosmostake.space
 ```
 
+- Kichain
+```console
+# RPC
+https://kichain-testnet-rpc.cosmostake.space
+# gRPC
+http://kichain-testnet-grpc.cosmostake.space
+# API REST
+https://kichain-testnet-rest.cosmostake.space
+```
+
 ### IBC relayers [here](https://github.com/cosmostake/ibc-relayers)
 ### We do:
 
