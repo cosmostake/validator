@@ -127,7 +127,7 @@ https://kichain-testnet-rest.cosmostake.space
 - Make education content (videos, guides, blogs etc) 
 - Translations in 5 languages
 - Write posts/articles/guides about projects in social media
-- Active governence  
+- Active governance
 
 - We also make many technical contributions such as: Relayer (IBC) Relayer (ICA), IBC Channels, Endpoints (RPC, REST), Snapshots, Seed & Peers and more.
 
