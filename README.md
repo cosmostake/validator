@@ -10,11 +10,7 @@
 
 - [Persistence](https://www.mintscan.io/persistence/validators/persistencevaloper1qz6xsskhyyd6mrqns2e3empull7el0gqp5dkru)
 
-- [Umee](https://www.mintscan.io/umee/validators/umeevaloper14w25sj0y6r8xfvh4jpek4qtqqwpx9flwnhsu90)
-
 - [Juno](https://www.mintscan.io/juno/validators/junovaloper1fsa7hy2qgq8xnfpnendmch3v8035529g3cwcms)
-
-- [Fetch.ai](https://www.mintscan.io/fetchai/validators/fetchvaloper1upsnujmqcceexscnpyk85dvpdjy8w45h7p5ca8)
 
 - [Osmosis](https://www.mintscan.io/osmosis/validators/osmovaloper183psjr4y05kwtpfew073q6hm84xdhp9tcn8ne7)
 
@@ -68,13 +64,11 @@ https://kichain-mainnet-rest.cosmostake.space
 
 - [Persistence](https://testnet.mintscan.io/persistence-testnet/validators/persistencevaloper16af2kgt0q2v9ks38pe4chlxk7hjqqykzy4q9gv)
 
-- [Umee](https://explorer.network.umee.cc/Canon-4/staking/umeevaloper1765sj3nv93p7cs97wjzzzf3f36p9eenel768st)
-
 - [Juno](https://testnet.mintscan.io/juno-testnet/validators/junovaloper12mclkvsuu5v5lxkrv3suzddc653elhgc5nahrf)
 
-- [Kichain](https://kichain-t-4.blockchain.ki/validator/tkivaloper1y8e8467gpsnfx5c048l53ks4al95wne73fn8gw)
-
 - [Nibiru](https://nibiru.explorers.guru/validator/nibivaloper1sep4dyhsefef2lwvv46l3enqz0rt8du453yc8u)
+
+- [Babylon](https://babylon.explorers.guru/validator/bbnvaloper17853gasrmcz9yys92jkv9f4nxzdzmthmp6z60f)
 
 ### Endpoints Testnet:
 
